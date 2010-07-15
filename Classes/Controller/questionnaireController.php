@@ -45,7 +45,7 @@ class Tx_KeQuestionnaireExtbase_Controller_questionnaireController extends Tx_Ex
 	 * @return void
 	 */
 	protected function initializeAction() {
-		$this->questionRepository = t3lib_div::makeInstance('Tx_KeQuestionnaireExtbase_Domain_Repository_QuestionRepository');
+		$this->questionRepository = t3lib_div::makeInstance('Tx_KeQuestionnaireExtbase_Domain_Repository_questionRepository');
 	}
 	/**
 	 * List action for this controller. Displays all questions.

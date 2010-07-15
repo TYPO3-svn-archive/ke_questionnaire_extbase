@@ -31,7 +31,7 @@
  * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class Tx_KeQuestionnaireExtbase_Domain_Model_Question extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainObject_AbstractEntity {
 	
 	/**
 	 * question type
