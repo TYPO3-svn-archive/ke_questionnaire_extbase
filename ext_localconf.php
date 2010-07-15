@@ -5,10 +5,10 @@ Tx_Extbase_Utility_Extension::configurePlugin(
 	$_EXTKEY,
 	'Pi1',
 	array(
-		'questionnaire' => 'index',
+		'Questionnaire' => 'index',
 	),
 	array(
-		'questionnaire' => 'index',
+		'Questionnaire' => 'index',
 	)
 );
 

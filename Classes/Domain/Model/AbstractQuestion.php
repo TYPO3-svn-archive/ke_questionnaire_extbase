@@ -229,25 +229,25 @@ abstract class Tx_KeQuestionnaireExtbase_Domain_Model_abstractQuestion extends T
 	
 	/**
 	 * answers
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_answer>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Answer>
 	 */
 	protected $answers;
 	
 	/**
 	 * columns
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_column>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Column>
 	 */
 	protected $columns;
 	
 	/**
 	 * subquestions
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_subquestion>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Subquestion>
 	 */
 	protected $subquestions;
 	
 	/**
 	 * sublines
-	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_subline>
+	 * @var Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Subline>
 	 */
 	protected $sublines;
 	
@@ -920,7 +920,7 @@ abstract class Tx_KeQuestionnaireExtbase_Domain_Model_abstractQuestion extends T
 	/**
 	 * Setter for answers
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_answer> $answers answers
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Answer> $answers answers
 	 * @return void
 	 */
 	public function setAnswers(Tx_Extbase_Persistence_ObjectStorage $answers) {
@@ -930,7 +930,7 @@ abstract class Tx_KeQuestionnaireExtbase_Domain_Model_abstractQuestion extends T
 	/**
 	 * Getter for answers
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_answer> answers
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Answer> answers
 	 */
 	public function getAnswers() {
 		return $this->answers;
@@ -939,27 +939,27 @@ abstract class Tx_KeQuestionnaireExtbase_Domain_Model_abstractQuestion extends T
 	/**
 	 * Adds a Answer
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_answer The Answer to be added
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_Answer The Answer to be added
 	 * @return void
 	 */
-	public function addAnswer(Tx_KeQuestionnaireExtbase_Domain_Model_answer $answer) {
+	public function addAnswer(Tx_KeQuestionnaireExtbase_Domain_Model_Answer $answer) {
 		$this->answers->attach($answer);
 	}
 	
 	/**
 	 * Removes a Answer
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_answer The Answer to be removed
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_Answer The Answer to be removed
 	 * @return void
 	 */
-	public function removeAnswer(Tx_KeQuestionnaireExtbase_Domain_Model_answer $answer) {
+	public function removeAnswer(Tx_KeQuestionnaireExtbase_Domain_Model_Answer $answer) {
 		$this->answers->detach($answer);
 	}
 	
 	/**
 	 * Setter for columns
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_column> $columns columns
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Column> $columns columns
 	 * @return void
 	 */
 	public function setColumns(Tx_Extbase_Persistence_ObjectStorage $columns) {
@@ -969,7 +969,7 @@ abstract class Tx_KeQuestionnaireExtbase_Domain_Model_abstractQuestion extends T
 	/**
 	 * Getter for columns
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_column> columns
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Column> columns
 	 */
 	public function getColumns() {
 		return $this->columns;
@@ -978,27 +978,27 @@ abstract class Tx_KeQuestionnaireExtbase_Domain_Model_abstractQuestion extends T
 	/**
 	 * Adds a Column
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_column The Column to be added
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_Column The Column to be added
 	 * @return void
 	 */
-	public function addColumn(Tx_KeQuestionnaireExtbase_Domain_Model_column $column) {
+	public function addColumn(Tx_KeQuestionnaireExtbase_Domain_Model_Column $column) {
 		$this->columns->attach($column);
 	}
 	
 	/**
 	 * Removes a Column
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_column The Column to be removed
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_Column The Column to be removed
 	 * @return void
 	 */
-	public function removeColumn(Tx_KeQuestionnaireExtbase_Domain_Model_column $column) {
+	public function removeColumn(Tx_KeQuestionnaireExtbase_Domain_Model_Column $column) {
 		$this->columns->detach($column);
 	}
 	
 	/**
 	 * Setter for subquestions
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_subquestion> $subquestions subquestions
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Subquestion> $subquestions subquestions
 	 * @return void
 	 */
 	public function setSubquestions(Tx_Extbase_Persistence_ObjectStorage $subquestions) {
@@ -1008,7 +1008,7 @@ abstract class Tx_KeQuestionnaireExtbase_Domain_Model_abstractQuestion extends T
 	/**
 	 * Getter for subquestions
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_subquestion> subquestions
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Subquestion> subquestions
 	 */
 	public function getSubquestions() {
 		return $this->subquestions;
@@ -1017,27 +1017,27 @@ abstract class Tx_KeQuestionnaireExtbase_Domain_Model_abstractQuestion extends T
 	/**
 	 * Adds a Subquestion
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_subquestion The Subquestion to be added
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_Subquestion The Subquestion to be added
 	 * @return void
 	 */
-	public function addSubquestion(Tx_KeQuestionnaireExtbase_Domain_Model_subquestion $subquestion) {
+	public function addSubquestion(Tx_KeQuestionnaireExtbase_Domain_Model_Subquestion $subquestion) {
 		$this->subquestions->attach($subquestion);
 	}
 	
 	/**
 	 * Removes a Subquestion
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_subquestion The Subquestion to be removed
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_Subquestion The Subquestion to be removed
 	 * @return void
 	 */
-	public function removeSubquestion(Tx_KeQuestionnaireExtbase_Domain_Model_subquestion $subquestion) {
+	public function removeSubquestion(Tx_KeQuestionnaireExtbase_Domain_Model_Subquestion $subquestion) {
 		$this->subquestions->detach($subquestion);
 	}
 	
 	/**
 	 * Setter for sublines
 	 *
-	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_subline> $sublines sublines
+	 * @param Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Subline> $sublines sublines
 	 * @return void
 	 */
 	public function setSublines(Tx_Extbase_Persistence_ObjectStorage $sublines) {
@@ -1047,7 +1047,7 @@ abstract class Tx_KeQuestionnaireExtbase_Domain_Model_abstractQuestion extends T
 	/**
 	 * Getter for sublines
 	 *
-	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_subline> sublines
+	 * @return Tx_Extbase_Persistence_ObjectStorage<Tx_KeQuestionnaireExtbase_Domain_Model_Subline> sublines
 	 */
 	public function getSublines() {
 		return $this->sublines;
@@ -1056,20 +1056,20 @@ abstract class Tx_KeQuestionnaireExtbase_Domain_Model_abstractQuestion extends T
 	/**
 	 * Adds a Subline
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_subline The Subline to be added
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_Subline The Subline to be added
 	 * @return void
 	 */
-	public function addSubline(Tx_KeQuestionnaireExtbase_Domain_Model_subline $subline) {
+	public function addSubline(Tx_KeQuestionnaireExtbase_Domain_Model_Subline $subline) {
 		$this->sublines->attach($subline);
 	}
 	
 	/**
 	 * Removes a Subline
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_subline The Subline to be removed
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_Subline The Subline to be removed
 	 * @return void
 	 */
-	public function removeSubline(Tx_KeQuestionnaireExtbase_Domain_Model_subline $subline) {
+	public function removeSubline(Tx_KeQuestionnaireExtbase_Domain_Model_Subline $subline) {
 		$this->sublines->detach($subline);
 	}
 	

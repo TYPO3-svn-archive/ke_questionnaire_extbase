@@ -31,7 +31,7 @@
  * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class Tx_KeQuestionnaireExtbase_Domain_Model_dependancy extends Tx_Extbase_DomainObject_AbstractEntity {
+class Tx_KeQuestionnaireExtbase_Domain_Model_Dependancy extends Tx_Extbase_DomainObject_AbstractEntity {
 	
 	/**
 	 * activating formula
@@ -53,7 +53,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_dependancy extends Tx_Extbase_Domai
 	
 	/**
 	 * activatingValue
-	 * @var Tx_KeQuestionnaireExtbase_Domain_Model_answer
+	 * @var Tx_KeQuestionnaireExtbase_Domain_Model_Answer
 	 */
 	protected $activating_value;
 	
@@ -119,17 +119,17 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_dependancy extends Tx_Extbase_Domai
 	/**
 	 * Setter for activatingValue
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_answer $activatingValue activatingValue
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_Answer $activatingValue activatingValue
 	 * @return void
 	 */
-	public function setActivatingValue(Tx_KeQuestionnaireExtbase_Domain_Model_answer $activatingValue) {
+	public function setActivatingValue(Tx_KeQuestionnaireExtbase_Domain_Model_Answer $activatingValue) {
 		$this->activatingValue = $activatingValue;
 	}
 
 	/**
 	 * Getter for activatingValue
 	 *
-	 * @return Tx_KeQuestionnaireExtbase_Domain_Model_answer activatingValue
+	 * @return Tx_KeQuestionnaireExtbase_Domain_Model_Answer activatingValue
 	 */
 	public function getActivatingValue() {
 		return $this->activatingValue;
