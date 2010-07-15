@@ -4,10 +4,10 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 $TCA['tx_kequestionnaireextbase_domain_model_answer'] = array(
 	'ctrl' => $TCA['tx_kequestionnaireextbase_domain_model_answer']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,value,correct_answer,text,helptext,image,image_position,finish_page_uid,show_input'
+		'showRecordFieldList' => 'title,value,correct_answer,text,help_text,image,image_position,finish_page_uid,show_input'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'title,value,correct_answer,text,helptext,image,image_position,finish_page_uid,show_input')
+		'1' => array('showitem' => 'title,value,correct_answer,text,help_text,image,image_position,finish_page_uid,show_input')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -93,9 +93,9 @@ $TCA['tx_kequestionnaireextbase_domain_model_answer'] = array(
 				'eval' => 'trim'
 			)
 		),
-		'helptext' => array(
+		'help_text' => array(
 			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_answer.helptext',
+			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_answer.help_text',
 			'config'  => array(
 				'type' => 'input',
 				'size' => 30,
@@ -115,13 +115,9 @@ $TCA['tx_kequestionnaireextbase_domain_model_answer'] = array(
 			'exclude' => 1,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_answer.image_position',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			)
 		),
 		'finish_page_uid' => array(

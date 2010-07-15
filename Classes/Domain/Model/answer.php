@@ -47,7 +47,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_answer extends Tx_Extbase_DomainObj
 	protected $value;
 	
 	/**
-	 * correct_answer
+	 * correct answer
 	 * @var boolean
 	 */
 	protected $correct_answer;
@@ -62,7 +62,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_answer extends Tx_Extbase_DomainObj
 	 * helptext
 	 * @var string
 	 */
-	protected $helptext;
+	protected $help_text;
 	
 	/**
 	 * image
@@ -71,19 +71,19 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_answer extends Tx_Extbase_DomainObj
 	protected $image;
 	
 	/**
-	 * image_position
-	 * @var select
+	 * image position
+	 * @var string
 	 */
 	protected $image_position;
 	
 	/**
-	 * finish_page_uid
+	 * finish page uid
 	 * @var integer
 	 */
 	protected $finish_page_uid;
 	
 	/**
-	 * show_input
+	 * show input
 	 * @var boolean
 	 */
 	protected $show_input;
@@ -129,31 +129,31 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_answer extends Tx_Extbase_DomainObj
 	}
 	
 	/**
-	 * Setter for correct_answer
+	 * Setter for correctAnswer
 	 *
-	 * @param boolean $correct_answer correct_answer
+	 * @param boolean $correctAnswer correct answer
 	 * @return void
 	 */
-	public function setCorrect_answer($correct_answer) {
-		$this->correct_answer = $correct_answer;
+	public function setCorrectAnswer($correctAnswer) {
+		$this->correctAnswer = $correctAnswer;
 	}
 
 	/**
-	 * Getter for correct_answer
+	 * Getter for correctAnswer
 	 *
-	 * @return boolean correct_answer
+	 * @return boolean correct answer
 	 */
-	public function getCorrect_answer() {
-		return $this->correct_answer;
+	public function getCorrectAnswer() {
+		return $this->correctAnswer;
 	}
 	
 	/**
-	 * Returns the boolean state of correct_answer
+	 * Returns the boolean state of correctAnswer
 	 *
-	 * @return bool The state of correct_answer
+	 * @return bool The state of correctAnswer
 	 */
-	public function isCorrect_answer() {
-		$this->getCorrect_answer();
+	public function isCorrectAnswer() {
+		$this->getCorrectAnswer();
 	}
 	
 	/**
@@ -176,22 +176,22 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_answer extends Tx_Extbase_DomainObj
 	}
 	
 	/**
-	 * Setter for helptext
+	 * Setter for helpText
 	 *
-	 * @param string $helptext helptext
+	 * @param string $helpText helptext
 	 * @return void
 	 */
-	public function setHelptext($helptext) {
-		$this->helptext = $helptext;
+	public function setHelpText($helpText) {
+		$this->helpText = $helpText;
 	}
 
 	/**
-	 * Getter for helptext
+	 * Getter for helpText
 	 *
 	 * @return string helptext
 	 */
-	public function getHelptext() {
-		return $this->helptext;
+	public function getHelpText() {
+		return $this->helpText;
 	}
 	
 	/**
@@ -214,69 +214,69 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_answer extends Tx_Extbase_DomainObj
 	}
 	
 	/**
-	 * Setter for image_position
+	 * Setter for imagePosition
 	 *
-	 * @param select $image_position image_position
+	 * @param string $imagePosition image position
 	 * @return void
 	 */
-	public function setImage_position($image_position) {
-		$this->image_position = $image_position;
+	public function setImagePosition($imagePosition) {
+		$this->imagePosition = $imagePosition;
 	}
 
 	/**
-	 * Getter for image_position
+	 * Getter for imagePosition
 	 *
-	 * @return select image_position
+	 * @return string image position
 	 */
-	public function getImage_position() {
-		return $this->image_position;
+	public function getImagePosition() {
+		return $this->imagePosition;
 	}
 	
 	/**
-	 * Setter for finish_page_uid
+	 * Setter for finishPageUid
 	 *
-	 * @param integer $finish_page_uid finish_page_uid
+	 * @param integer $finishPageUid finish page uid
 	 * @return void
 	 */
-	public function setFinish_page_uid($finish_page_uid) {
-		$this->finish_page_uid = $finish_page_uid;
+	public function setFinishPageUid($finishPageUid) {
+		$this->finishPageUid = $finishPageUid;
 	}
 
 	/**
-	 * Getter for finish_page_uid
+	 * Getter for finishPageUid
 	 *
-	 * @return integer finish_page_uid
+	 * @return integer finish page uid
 	 */
-	public function getFinish_page_uid() {
-		return $this->finish_page_uid;
+	public function getFinishPageUid() {
+		return $this->finishPageUid;
 	}
 	
 	/**
-	 * Setter for show_input
+	 * Setter for showInput
 	 *
-	 * @param boolean $show_input show_input
+	 * @param boolean $showInput show input
 	 * @return void
 	 */
-	public function setShow_input($show_input) {
-		$this->show_input = $show_input;
+	public function setShowInput($showInput) {
+		$this->showInput = $showInput;
 	}
 
 	/**
-	 * Getter for show_input
+	 * Getter for showInput
 	 *
-	 * @return boolean show_input
+	 * @return boolean show input
 	 */
-	public function getShow_input() {
-		return $this->show_input;
+	public function getShowInput() {
+		return $this->showInput;
 	}
 	
 	/**
-	 * Returns the boolean state of show_input
+	 * Returns the boolean state of showInput
 	 *
-	 * @return bool The state of show_input
+	 * @return bool The state of showInput
 	 */
-	public function isShow_input() {
-		$this->getShow_input();
+	public function isShowInput() {
+		$this->getShowInput();
 	}
 	
 }

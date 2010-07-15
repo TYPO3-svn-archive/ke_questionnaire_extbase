@@ -8,10 +8,10 @@
     <data type="array">
         <languageKey index="default" type="array">
 			<label index="title.description">title</label>
-			<label index="different_type.description">different_type</label>
-			<label index="maxanswers.description">maxanswers</label>
+			<label index="different_type.description">different type</label>
+			<label index="max_answers.description">maxanswers</label>
 			<label index="image.description">image</label>
-			<label index="image_position.description">image_position</label>
+			<label index="image_position.description">image position</label>
 		</languageKey>
     </data>
 </T3locallang>

@@ -34,19 +34,19 @@
 class Tx_KeQuestionnaireExtbase_Domain_Model_result extends Tx_Extbase_DomainObject_AbstractEntity {
 	
 	/**
-	 * start_tstamp
+	 * start tstamp
 	 * @var integer
 	 */
 	protected $start_tstamp;
 	
 	/**
-	 * last_tstamp
+	 * last tstamp
 	 * @var integer
 	 */
 	protected $last_tstamp;
 	
 	/**
-	 * finished_tstamp
+	 * finished tstamp
 	 * @var integer
 	 */
 	protected $finished_tstamp;
@@ -64,7 +64,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_result extends Tx_Extbase_DomainObj
 	protected $ip;
 	
 	/**
-	 * mailsent_tstamp
+	 * mailsent_ stamp
 	 * @var string
 	 */
 	protected $mailsent_tstamp;
@@ -78,60 +78,60 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_result extends Tx_Extbase_DomainObj
 	
 	
 	/**
-	 * Setter for start_tstamp
+	 * Setter for startTstamp
 	 *
-	 * @param integer $start_tstamp start_tstamp
+	 * @param integer $startTstamp start tstamp
 	 * @return void
 	 */
-	public function setStart_tstamp($start_tstamp) {
-		$this->start_tstamp = $start_tstamp;
+	public function setStartTstamp($startTstamp) {
+		$this->startTstamp = $startTstamp;
 	}
 
 	/**
-	 * Getter for start_tstamp
+	 * Getter for startTstamp
 	 *
-	 * @return integer start_tstamp
+	 * @return integer start tstamp
 	 */
-	public function getStart_tstamp() {
-		return $this->start_tstamp;
+	public function getStartTstamp() {
+		return $this->startTstamp;
 	}
 	
 	/**
-	 * Setter for last_tstamp
+	 * Setter for lastTstamp
 	 *
-	 * @param integer $last_tstamp last_tstamp
+	 * @param integer $lastTstamp last tstamp
 	 * @return void
 	 */
-	public function setLast_tstamp($last_tstamp) {
-		$this->last_tstamp = $last_tstamp;
+	public function setLastTstamp($lastTstamp) {
+		$this->lastTstamp = $lastTstamp;
 	}
 
 	/**
-	 * Getter for last_tstamp
+	 * Getter for lastTstamp
 	 *
-	 * @return integer last_tstamp
+	 * @return integer last tstamp
 	 */
-	public function getLast_tstamp() {
-		return $this->last_tstamp;
+	public function getLastTstamp() {
+		return $this->lastTstamp;
 	}
 	
 	/**
-	 * Setter for finished_tstamp
+	 * Setter for finishedTstamp
 	 *
-	 * @param integer $finished_tstamp finished_tstamp
+	 * @param integer $finishedTstamp finished tstamp
 	 * @return void
 	 */
-	public function setFinished_tstamp($finished_tstamp) {
-		$this->finished_tstamp = $finished_tstamp;
+	public function setFinishedTstamp($finishedTstamp) {
+		$this->finishedTstamp = $finishedTstamp;
 	}
 
 	/**
-	 * Getter for finished_tstamp
+	 * Getter for finishedTstamp
 	 *
-	 * @return integer finished_tstamp
+	 * @return integer finished tstamp
 	 */
-	public function getFinished_tstamp() {
-		return $this->finished_tstamp;
+	public function getFinishedTstamp() {
+		return $this->finishedTstamp;
 	}
 	
 	/**
@@ -173,22 +173,22 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_result extends Tx_Extbase_DomainObj
 	}
 	
 	/**
-	 * Setter for mailsent_tstamp
+	 * Setter for mailsentTstamp
 	 *
-	 * @param string $mailsent_tstamp mailsent_tstamp
+	 * @param string $mailsentTstamp mailsent_ stamp
 	 * @return void
 	 */
-	public function setMailsent_tstamp($mailsent_tstamp) {
-		$this->mailsent_tstamp = $mailsent_tstamp;
+	public function setMailsentTstamp($mailsentTstamp) {
+		$this->mailsentTstamp = $mailsentTstamp;
 	}
 
 	/**
-	 * Getter for mailsent_tstamp
+	 * Getter for mailsentTstamp
 	 *
-	 * @return string mailsent_tstamp
+	 * @return string mailsent_ stamp
 	 */
-	public function getMailsent_tstamp() {
-		return $this->mailsent_tstamp;
+	public function getMailsentTstamp() {
+		return $this->mailsentTstamp;
 	}
 	
 	/**

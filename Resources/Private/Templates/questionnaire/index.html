@@ -1,0 +1,17 @@
+<f:layout name="default" />
+
+This Template is for showing the questionnaire
+
+<f:section name="main">
+<h1>Questionnaire</h1>
+
+<f:flashMessages />
+    <f:if condition="{questions}">
+	<f:then>
+	    <f:for each="{questions}" as="question">
+		    {question.title}
+	    </f:for>
+	</f:then>
+	<f:else>Keine Fragen</f:else>
+    </f:if>
+</f:section>

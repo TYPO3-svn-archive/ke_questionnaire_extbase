@@ -41,8 +41,8 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_column extends Tx_Extbase_DomainObj
 	protected $title;
 	
 	/**
-	 * different_type
-	 * @var select
+	 * different type
+	 * @var string
 	 */
 	protected $different_type;
 	
@@ -50,7 +50,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_column extends Tx_Extbase_DomainObj
 	 * maxanswers
 	 * @var integer
 	 */
-	protected $maxanswers;
+	protected $max_answers;
 	
 	/**
 	 * image
@@ -59,8 +59,8 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_column extends Tx_Extbase_DomainObj
 	protected $image;
 	
 	/**
-	 * image_position
-	 * @var select
+	 * image position
+	 * @var string
 	 */
 	protected $image_position;
 	
@@ -86,41 +86,41 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_column extends Tx_Extbase_DomainObj
 	}
 	
 	/**
-	 * Setter for different_type
+	 * Setter for differentType
 	 *
-	 * @param select $different_type different_type
+	 * @param string $differentType different type
 	 * @return void
 	 */
-	public function setDifferent_type($different_type) {
-		$this->different_type = $different_type;
+	public function setDifferentType($differentType) {
+		$this->differentType = $differentType;
 	}
 
 	/**
-	 * Getter for different_type
+	 * Getter for differentType
 	 *
-	 * @return select different_type
+	 * @return string different type
 	 */
-	public function getDifferent_type() {
-		return $this->different_type;
+	public function getDifferentType() {
+		return $this->differentType;
 	}
 	
 	/**
-	 * Setter for maxanswers
+	 * Setter for maxAnswers
 	 *
-	 * @param integer $maxanswers maxanswers
+	 * @param integer $maxAnswers maxanswers
 	 * @return void
 	 */
-	public function setMaxanswers($maxanswers) {
-		$this->maxanswers = $maxanswers;
+	public function setMaxAnswers($maxAnswers) {
+		$this->maxAnswers = $maxAnswers;
 	}
 
 	/**
-	 * Getter for maxanswers
+	 * Getter for maxAnswers
 	 *
 	 * @return integer maxanswers
 	 */
-	public function getMaxanswers() {
-		return $this->maxanswers;
+	public function getMaxAnswers() {
+		return $this->maxAnswers;
 	}
 	
 	/**
@@ -143,22 +143,22 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_column extends Tx_Extbase_DomainObj
 	}
 	
 	/**
-	 * Setter for image_position
+	 * Setter for imagePosition
 	 *
-	 * @param select $image_position image_position
+	 * @param string $imagePosition image position
 	 * @return void
 	 */
-	public function setImage_position($image_position) {
-		$this->image_position = $image_position;
+	public function setImagePosition($imagePosition) {
+		$this->imagePosition = $imagePosition;
 	}
 
 	/**
-	 * Getter for image_position
+	 * Getter for imagePosition
 	 *
-	 * @return select image_position
+	 * @return string image position
 	 */
-	public function getImage_position() {
-		return $this->image_position;
+	public function getImagePosition() {
+		return $this->imagePosition;
 	}
 	
 }

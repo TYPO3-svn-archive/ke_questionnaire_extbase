@@ -7,11 +7,11 @@
     </meta>
     <data type="array">
         <languageKey index="default" type="array">
-			<label index="title_line.description">title_line</label>
+			<label index="title_line.description">title line</label>
 			<label index="title.description">title</label>
 			<label index="text.description">text</label>
 			<label index="image.description">image</label>
-			<label index="image_position.description">image_position</label>
+			<label index="image_position.description">image position</label>
 		</languageKey>
     </data>
 </T3locallang>

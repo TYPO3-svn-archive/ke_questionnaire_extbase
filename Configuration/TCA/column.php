@@ -4,10 +4,10 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 $TCA['tx_kequestionnaireextbase_domain_model_column'] = array(
 	'ctrl' => $TCA['tx_kequestionnaireextbase_domain_model_column']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'title,different_type,maxanswers,image,image_position'
+		'showRecordFieldList' => 'title,different_type,max_answers,image,image_position'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'title,different_type,maxanswers,image,image_position')
+		'1' => array('showitem' => 'title,different_type,max_answers,image,image_position')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -71,18 +71,14 @@ $TCA['tx_kequestionnaireextbase_domain_model_column'] = array(
 			'exclude' => 1,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_column.different_type',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			)
 		),
-		'maxanswers' => array(
+		'max_answers' => array(
 			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_column.maxanswers',
+			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_column.max_answers',
 			'config'  => array(
 				'type' => 'input',
 				'size' => 4,
@@ -102,13 +98,9 @@ $TCA['tx_kequestionnaireextbase_domain_model_column'] = array(
 			'exclude' => 1,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_column.image_position',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			)
 		),
 		'question' => array(

@@ -34,25 +34,25 @@
 class Tx_KeQuestionnaireExtbase_Domain_Model_dependancy extends Tx_Extbase_DomainObject_AbstractEntity {
 	
 	/**
-	 * activating_formula
+	 * activating formula
 	 * @var string
 	 */
 	protected $activating_formula;
 	
 	/**
-	 * dependant_question
+	 * dependantQuestion
 	 * @var Tx_KeQuestionnaireExtbase_Domain_Model_question
 	 */
 	protected $dependant_question;
 	
 	/**
-	 * activating_question
+	 * activatingQuestion
 	 * @var Tx_KeQuestionnaireExtbase_Domain_Model_question
 	 */
 	protected $activating_question;
 	
 	/**
-	 * activating_value
+	 * activatingValue
 	 * @var Tx_KeQuestionnaireExtbase_Domain_Model_answer
 	 */
 	protected $activating_value;
@@ -60,79 +60,79 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_dependancy extends Tx_Extbase_Domai
 	
 	
 	/**
-	 * Setter for activating_formula
+	 * Setter for activatingFormula
 	 *
-	 * @param string $activating_formula activating_formula
+	 * @param string $activatingFormula activating formula
 	 * @return void
 	 */
-	public function setActivating_formula($activating_formula) {
-		$this->activating_formula = $activating_formula;
+	public function setActivatingFormula($activatingFormula) {
+		$this->activatingFormula = $activatingFormula;
 	}
 
 	/**
-	 * Getter for activating_formula
+	 * Getter for activatingFormula
 	 *
-	 * @return string activating_formula
+	 * @return string activating formula
 	 */
-	public function getActivating_formula() {
-		return $this->activating_formula;
+	public function getActivatingFormula() {
+		return $this->activatingFormula;
 	}
 	
 	/**
-	 * Setter for dependant_question
+	 * Setter for dependantQuestion
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_question $dependant_question dependant_question
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_question $dependantQuestion dependantQuestion
 	 * @return void
 	 */
-	public function setDependant_question(Tx_KeQuestionnaireExtbase_Domain_Model_question $dependant_question) {
-		$this->dependant_question = $dependant_question;
+	public function setDependantQuestion(Tx_KeQuestionnaireExtbase_Domain_Model_question $dependantQuestion) {
+		$this->dependantQuestion = $dependantQuestion;
 	}
 
 	/**
-	 * Getter for dependant_question
+	 * Getter for dependantQuestion
 	 *
-	 * @return Tx_KeQuestionnaireExtbase_Domain_Model_question dependant_question
+	 * @return Tx_KeQuestionnaireExtbase_Domain_Model_question dependantQuestion
 	 */
-	public function getDependant_question() {
-		return $this->dependant_question;
+	public function getDependantQuestion() {
+		return $this->dependantQuestion;
 	}
 	
 	/**
-	 * Setter for activating_question
+	 * Setter for activatingQuestion
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_question $activating_question activating_question
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_question $activatingQuestion activatingQuestion
 	 * @return void
 	 */
-	public function setActivating_question(Tx_KeQuestionnaireExtbase_Domain_Model_question $activating_question) {
-		$this->activating_question = $activating_question;
+	public function setActivatingQuestion(Tx_KeQuestionnaireExtbase_Domain_Model_question $activatingQuestion) {
+		$this->activatingQuestion = $activatingQuestion;
 	}
 
 	/**
-	 * Getter for activating_question
+	 * Getter for activatingQuestion
 	 *
-	 * @return Tx_KeQuestionnaireExtbase_Domain_Model_question activating_question
+	 * @return Tx_KeQuestionnaireExtbase_Domain_Model_question activatingQuestion
 	 */
-	public function getActivating_question() {
-		return $this->activating_question;
+	public function getActivatingQuestion() {
+		return $this->activatingQuestion;
 	}
 	
 	/**
-	 * Setter for activating_value
+	 * Setter for activatingValue
 	 *
-	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_answer $activating_value activating_value
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_answer $activatingValue activatingValue
 	 * @return void
 	 */
-	public function setActivating_value(Tx_KeQuestionnaireExtbase_Domain_Model_answer $activating_value) {
-		$this->activating_value = $activating_value;
+	public function setActivatingValue(Tx_KeQuestionnaireExtbase_Domain_Model_answer $activatingValue) {
+		$this->activatingValue = $activatingValue;
 	}
 
 	/**
-	 * Getter for activating_value
+	 * Getter for activatingValue
 	 *
-	 * @return Tx_KeQuestionnaireExtbase_Domain_Model_answer activating_value
+	 * @return Tx_KeQuestionnaireExtbase_Domain_Model_answer activatingValue
 	 */
-	public function getActivating_value() {
-		return $this->activating_value;
+	public function getActivatingValue() {
+		return $this->activatingValue;
 	}
 	
 }

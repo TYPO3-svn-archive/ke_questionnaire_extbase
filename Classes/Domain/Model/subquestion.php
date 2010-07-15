@@ -34,7 +34,7 @@
 class Tx_KeQuestionnaireExtbase_Domain_Model_subquestion extends Tx_Extbase_DomainObject_AbstractEntity {
 	
 	/**
-	 * title_line
+	 * title line
 	 * @var boolean
 	 */
 	protected $title_line;
@@ -58,7 +58,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_subquestion extends Tx_Extbase_Doma
 	protected $image;
 	
 	/**
-	 * image_position
+	 * image position
 	 * @var string
 	 */
 	protected $image_position;
@@ -66,31 +66,31 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_subquestion extends Tx_Extbase_Doma
 	
 	
 	/**
-	 * Setter for title_line
+	 * Setter for titleLine
 	 *
-	 * @param boolean $title_line title_line
+	 * @param boolean $titleLine title line
 	 * @return void
 	 */
-	public function setTitle_line($title_line) {
-		$this->title_line = $title_line;
+	public function setTitleLine($titleLine) {
+		$this->titleLine = $titleLine;
 	}
 
 	/**
-	 * Getter for title_line
+	 * Getter for titleLine
 	 *
-	 * @return boolean title_line
+	 * @return boolean title line
 	 */
-	public function getTitle_line() {
-		return $this->title_line;
+	public function getTitleLine() {
+		return $this->titleLine;
 	}
 	
 	/**
-	 * Returns the boolean state of title_line
+	 * Returns the boolean state of titleLine
 	 *
-	 * @return bool The state of title_line
+	 * @return bool The state of titleLine
 	 */
-	public function isTitle_line() {
-		$this->getTitle_line();
+	public function isTitleLine() {
+		$this->getTitleLine();
 	}
 	
 	/**
@@ -151,22 +151,22 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_subquestion extends Tx_Extbase_Doma
 	}
 	
 	/**
-	 * Setter for image_position
+	 * Setter for imagePosition
 	 *
-	 * @param string $image_position image_position
+	 * @param string $imagePosition image position
 	 * @return void
 	 */
-	public function setImage_position($image_position) {
-		$this->image_position = $image_position;
+	public function setImagePosition($imagePosition) {
+		$this->imagePosition = $imagePosition;
 	}
 
 	/**
-	 * Getter for image_position
+	 * Getter for imagePosition
 	 *
-	 * @return string image_position
+	 * @return string image position
 	 */
-	public function getImage_position() {
-		return $this->image_position;
+	public function getImagePosition() {
+		return $this->imagePosition;
 	}
 	
 }

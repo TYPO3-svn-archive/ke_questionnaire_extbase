@@ -4,10 +4,10 @@ if (!defined ('TYPO3_MODE')) 	die ('Access denied.');
 $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 	'ctrl' => $TCA['tx_kequestionnaireextbase_domain_model_question']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'type,title,show_title,text,helptext,image,image_position,mandatory,mandatory_correct,time,dependant_show,open_type,open_pre_text,open_in_text,open_post_text,open_validation,open_validation_text,closed_type,closed_selectsize,closed_maxanswers,closed_randomanswers,closed_inputfield,matrix_type,matrix_validation,matrix_maxanswers,matrix_inputfield,demographic_type,demographic_fields,demographic_addressfields,privacy_post,privacy_link,privacy_file,type,dependancy_simple,answers,columns,subquestions,sublines'
+		'showRecordFieldList' => 'type,title,show_title,text,help_text,image,image_position,mandatory,mandatory_correct,dependant_show,open_type,open_pre_text,open_in_text,open_post_text,open_validation,open_validation_text,closed_type,closed_size,closed_max_answers,closed_random_answers,closed_inputfield,matrix_type,matrix_validation,matrix_max_answers,matrix_inputfield,demographic_type,demographic_fields,demographic_address_fields,privacy_post,privacy_link,privacy_file,dependancy_simple,answers,columns,subquestions,sublines'
 	),
 	'types' => array(
-		'1' => array('showitem' => 'type,title,show_title,text,helptext,image,image_position,mandatory,mandatory_correct,time,dependant_show,open_type,open_pre_text,open_in_text,open_post_text,open_validation,open_validation_text,closed_type,closed_selectsize,closed_maxanswers,closed_randomanswers,closed_inputfield,matrix_type,matrix_validation,matrix_maxanswers,matrix_inputfield,demographic_type,demographic_fields,demographic_addressfields,privacy_post,privacy_link,privacy_file,type,dependancy_simple,answers,columns,subquestions,sublines')
+		'1' => array('showitem' => 'type,title,show_title,text,help_text,image,image_position,mandatory,mandatory_correct,dependant_show,open_type,open_pre_text,open_in_text,open_post_text,open_validation,open_validation_text,closed_type,closed_size,closed_max_answers,closed_random_answers,closed_inputfield,matrix_type,matrix_validation,matrix_max_answers,matrix_inputfield,demographic_type,demographic_fields,demographic_address_fields,privacy_post,privacy_link,privacy_file,dependancy_simple,answers,columns,subquestions,sublines')
 	),
 	'palettes' => array(
 		'1' => array('showitem' => '')
@@ -62,13 +62,9 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.type',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => 'required'
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim,required'
 			)
 		),
 		'title' => array(
@@ -97,9 +93,9 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 				'eval' => 'trim'
 			)
 		),
-		'helptext' => array(
+		'help_text' => array(
 			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.helptext',
+			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.help_text',
 			'config'  => array(
 				'type' => 'input',
 				'size' => 30,
@@ -119,13 +115,9 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 			'exclude' => 1,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.image_position',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			)
 		),
 		'mandatory' => array(
@@ -144,15 +136,6 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 				'default' => 0
 			)
 		),
-		'time' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.time',
-			'config'  => array(
-				'type' => 'input',
-				'size' => 4,
-				'eval' => 'int'
-			)
-		),
 		'dependant_show' => array(
 			'exclude' => 1,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.dependant_show',
@@ -166,13 +149,9 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.open_type',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			)
 		),
 		'open_pre_text' => array(
@@ -206,13 +185,9 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.open_validation',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			)
 		),
 		'open_validation_text' => array(
@@ -228,36 +203,32 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.closed_type',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			)
 		),
-		'closed_selectsize' => array(
+		'closed_size' => array(
 			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.closed_selectsize',
+			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.closed_size',
 			'config'  => array(
 				'type' => 'input',
 				'size' => 4,
 				'eval' => 'int'
 			)
 		),
-		'closed_maxanswers' => array(
+		'closed_max_answers' => array(
 			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.closed_maxanswers',
+			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.closed_max_answers',
 			'config'  => array(
 				'type' => 'input',
 				'size' => 4,
 				'eval' => 'int'
 			)
 		),
-		'closed_randomanswers' => array(
+		'closed_random_answers' => array(
 			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.closed_randomanswers',
+			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.closed_random_answers',
 			'config'  => array(
 				'type' => 'check',
 				'default' => 0
@@ -276,31 +247,23 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.matrix_type',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			)
 		),
 		'matrix_validation' => array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.matrix_validation',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			)
 		),
-		'matrix_maxanswers' => array(
+		'matrix_max_answers' => array(
 			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.matrix_maxanswers',
+			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.matrix_max_answers',
 			'config'  => array(
 				'type' => 'input',
 				'size' => 4,
@@ -320,13 +283,9 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.demographic_type',
 			'config'  => array(
-				'type' => 'select',
-				'items' => array (
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim'
 			)
 		),
 		'demographic_fields' => array(
@@ -338,9 +297,9 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 				'eval' => 'trim'
 			)
 		),
-		'demographic_addressfields' => array(
+		'demographic_address_fields' => array(
 			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.demographic_addressfields',
+			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.demographic_address_fields',
 			'config'  => array(
 				'type' => 'input',
 				'size' => 30,
@@ -368,15 +327,6 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 		'privacy_file' => array(
 			'exclude' => 0,
 			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.privacy_file',
-			'config'  => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim'
-			)
-		),
-		'type' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.type',
 			'config'  => array(
 				'type' => 'input',
 				'size' => 30,

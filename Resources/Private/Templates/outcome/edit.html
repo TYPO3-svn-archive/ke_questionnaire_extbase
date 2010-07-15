@@ -1,0 +1,27 @@
+<f:layout name="default" />
+
+This template displays a EDIT form for the current domain object.
+
+<f:section name="main">
+<h1>Edit outcome</h1>
+
+<f:flashMessages />
+
+<f:render partial="formErrors" />
+
+<f:form method="post" action="update" name="outcome" object="{outcome}">
+	<label for="title"><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.title" /></label><br />
+	<f:form.textbox property="title" /><br />
+	<label for="title"><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.value_start" /></label><br />
+	<f:form.textbox property="value_start" /><br />
+	<label for="title"><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.value_end" /></label><br />
+	<f:form.textbox property="value_end" /><br />
+	<label for="title"><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.text" /></label><br />
+	<f:form.textbox property="text" /><br />
+	<label for="title"><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.image" /></label><br />
+	<f:form.textbox property="image" /><br />
+	<label for="title"><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.image_position" /></label><br />
+	<f:form.textbox property="image_position" /><br />
+	<f:form.submit value="Edit" />
+</f:form>
+</f:section>

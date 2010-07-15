@@ -9,13 +9,13 @@
         <languageKey index="default" type="array">
 			<label index="title.description">title</label>
 			<label index="value.description">value</label>
-			<label index="correct_answer.description">correct_answer</label>
+			<label index="correct_answer.description">correct answer</label>
 			<label index="text.description">text</label>
-			<label index="helptext.description">helptext</label>
+			<label index="help_text.description">helptext</label>
 			<label index="image.description">image</label>
-			<label index="image_position.description">image_position</label>
-			<label index="finish_page_uid.description">finish_page_uid</label>
-			<label index="show_input.description">show_input</label>
+			<label index="image_position.description">image position</label>
+			<label index="finish_page_uid.description">finish page uid</label>
+			<label index="show_input.description">show input</label>
 		</languageKey>
     </data>
 </T3locallang>

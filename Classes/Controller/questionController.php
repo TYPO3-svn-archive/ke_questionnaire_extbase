@@ -33,7 +33,7 @@
  */
 
 // TODO: As your extension matures, you should use Tx_Extbase_MVC_Controller_ActionController as base class, instead of the ScaffoldingController used below.
-class Tx_KeQuestionnaireExtbase_Controller_questionController extends Tx_ExtbaseKickstarter_Scaffolding_AbstractScaffoldingController {
+class Tx_KeQuestionnaireExtbase_Controller_questionController extends Tx_Extbase_MVC_Controller_ActionController {
 	
 	/**
 	 * @var Tx_KeQuestionnaireExtbase_Domain_Repository_questionRepository
@@ -48,8 +48,75 @@ class Tx_KeQuestionnaireExtbase_Controller_questionController extends Tx_Extbase
 	protected function initializeAction() {
 		$this->questionRepository = t3lib_div::makeInstance('Tx_KeQuestionnaireExtbase_Domain_Repository_questionRepository');
 	}
-	##TOKEN FOR SCAFFOLDING. Will be replaced by the necessary actions for Create, Read, Update and Delete queries by the kickstarter, when using scaffold2file.
-	# DO NOT REMOVE THIS TOKEN!##
+	/**
+	 * List action for this controller. Displays all questions.
+	 */
+	public function indexAction() {
+		$questions = $this->questionRepository->findAll();
+		$this->view->assign('questions', $questions);
+	}
+
+	/**
+	 * Action that displays a single question
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_question $question The question to display
+	 */
+	public function showAction(Tx_KeQuestionnaireExtbase_Domain_Model_question $question) {
+		$this->view->assign('question', $question);
+	}
+
+	/**
+	 * Displays a form for creating a new question
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_question $newquestion A fresh question object taken as a basis for the rendering
+	 * @dontvalidate $newquestion
+	 */
+	public function newAction(Tx_KeQuestionnaireExtbase_Domain_Model_question $newquestion = NULL) {
+		$this->view->assign('newquestion', $newquestion);
+	}
+
+	/**
+	 * Creates a new question and forwards to the index action.
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_question $newquestion A fresh question object which has not yet been added to the repository
+	 */
+	public function createAction(Tx_KeQuestionnaireExtbase_Domain_Model_question $newquestion) {
+		$this->questionRepository->add($newquestion);
+		$this->flashMessageContainer->add('Your new question was created.');
+		$this->redirect('index');
+	}
+
+	/**
+	 * Displays a form to edit an existing question
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_question $question The question to display
+	 * @dontvalidate $question
+	 */
+	public function editAction(Tx_KeQuestionnaireExtbase_Domain_Model_question $question) {
+		$this->view->assign('question', $question);
+	}
+
+	/**
+	 * Updates an existing question and forwards to the index action afterwards.
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_question $question The question to display
+	 */
+	public function updateAction(Tx_KeQuestionnaireExtbase_Domain_Model_question $question) {
+		$this->questionRepository->update($question);
+		$this->flashMessageContainer->add('Your question was updated.');
+		$this->redirect('index');
+	}
+
+	/**
+	 * Deletes an existing question
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_question $question The question to be deleted
+	 */
+	public function deleteAction(Tx_KeQuestionnaireExtbase_Domain_Model_question $question) {
+		$this->questionRepository->remove($question);
+		$this->flashMessageContainer->add('Your question was removed.');
+		$this->redirect('index');
+	}
 	
 
 	

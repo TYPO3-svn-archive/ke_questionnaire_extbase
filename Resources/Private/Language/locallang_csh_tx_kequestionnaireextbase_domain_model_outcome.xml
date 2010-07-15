@@ -8,11 +8,11 @@
     <data type="array">
         <languageKey index="default" type="array">
 			<label index="title.description">title</label>
-			<label index="value_start.description">value_start</label>
-			<label index="value_end.description">value_end</label>
+			<label index="value_start.description">value start</label>
+			<label index="value_end.description">value end</label>
 			<label index="text.description">text</label>
 			<label index="image.description">image</label>
-			<label index="image_position.description">image_position</label>
+			<label index="image_position.description">image position</label>
 		</languageKey>
     </data>
 </T3locallang>

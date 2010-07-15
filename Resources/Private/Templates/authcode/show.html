@@ -1,0 +1,32 @@
+<f:layout name="default" />
+
+This Template is responsible for creating a single view for a domain object
+
+<f:section name="main">
+<h1>Single View for authcode</h1>
+
+<f:flashMessages />
+
+<table>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_authcode.qpid" /></td>
+		<td>{authcode.qpid}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_authcode.authcode" /></td>
+		<td>{authcode.authcode}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_authcode.email" /></td>
+		<td>{authcode.email}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_authcode.feuser" /></td>
+		<td>{authcode.feuser}</td>
+	</tr>
+</table>
+<f:link.action action="edit" arguments="{authcode : authcode}">Edit</f:link.action>
+<f:link.action action="delete" arguments="{authcode : authcode}">Delete</f:link.action>
+
+<f:link.action action="index">Back to listing</f:link.action>
+</f:section>

@@ -41,13 +41,13 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_outcome extends Tx_Extbase_DomainOb
 	protected $title;
 	
 	/**
-	 * value_start
+	 * value start
 	 * @var integer
 	 */
 	protected $value_start;
 	
 	/**
-	 * value_end
+	 * value end
 	 * @var integer
 	 */
 	protected $value_end;
@@ -65,7 +65,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_outcome extends Tx_Extbase_DomainOb
 	protected $image;
 	
 	/**
-	 * image_position
+	 * image position
 	 * @var string
 	 */
 	protected $image_position;
@@ -92,41 +92,41 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_outcome extends Tx_Extbase_DomainOb
 	}
 	
 	/**
-	 * Setter for value_start
+	 * Setter for valueStart
 	 *
-	 * @param integer $value_start value_start
+	 * @param integer $valueStart value start
 	 * @return void
 	 */
-	public function setValue_start($value_start) {
-		$this->value_start = $value_start;
+	public function setValueStart($valueStart) {
+		$this->valueStart = $valueStart;
 	}
 
 	/**
-	 * Getter for value_start
+	 * Getter for valueStart
 	 *
-	 * @return integer value_start
+	 * @return integer value start
 	 */
-	public function getValue_start() {
-		return $this->value_start;
+	public function getValueStart() {
+		return $this->valueStart;
 	}
 	
 	/**
-	 * Setter for value_end
+	 * Setter for valueEnd
 	 *
-	 * @param integer $value_end value_end
+	 * @param integer $valueEnd value end
 	 * @return void
 	 */
-	public function setValue_end($value_end) {
-		$this->value_end = $value_end;
+	public function setValueEnd($valueEnd) {
+		$this->valueEnd = $valueEnd;
 	}
 
 	/**
-	 * Getter for value_end
+	 * Getter for valueEnd
 	 *
-	 * @return integer value_end
+	 * @return integer value end
 	 */
-	public function getValue_end() {
-		return $this->value_end;
+	public function getValueEnd() {
+		return $this->valueEnd;
 	}
 	
 	/**
@@ -168,22 +168,22 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_outcome extends Tx_Extbase_DomainOb
 	}
 	
 	/**
-	 * Setter for image_position
+	 * Setter for imagePosition
 	 *
-	 * @param string $image_position image_position
+	 * @param string $imagePosition image position
 	 * @return void
 	 */
-	public function setImage_position($image_position) {
-		$this->image_position = $image_position;
+	public function setImagePosition($imagePosition) {
+		$this->imagePosition = $imagePosition;
 	}
 
 	/**
-	 * Getter for image_position
+	 * Getter for imagePosition
 	 *
-	 * @return string image_position
+	 * @return string image position
 	 */
-	public function getImage_position() {
-		return $this->image_position;
+	public function getImagePosition() {
+		return $this->imagePosition;
 	}
 	
 }

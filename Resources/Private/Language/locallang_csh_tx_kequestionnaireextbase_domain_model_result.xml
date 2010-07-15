@@ -7,12 +7,12 @@
     </meta>
     <data type="array">
         <languageKey index="default" type="array">
-			<label index="start_tstamp.description">start_tstamp</label>
-			<label index="last_tstamp.description">last_tstamp</label>
-			<label index="finished_tstamp.description">finished_tstamp</label>
+			<label index="start_tstamp.description">start tstamp</label>
+			<label index="last_tstamp.description">last tstamp</label>
+			<label index="finished_tstamp.description">finished tstamp</label>
 			<label index="xmldata.description">xmldata</label>
 			<label index="ip.description">ip</label>
-			<label index="mailsent_tstamp.description">mailsent_tstamp</label>
+			<label index="mailsent_tstamp.description">mailsent_ stamp</label>
 			<label index="auth.description">auth</label>
 		</languageKey>
     </data>

@@ -1,0 +1,144 @@
+<f:layout name="default" />
+
+This Template is responsible for creating a single view for a domain object
+
+<f:section name="main">
+<h1>Single View for question</h1>
+
+<f:flashMessages />
+
+<table>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.type" /></td>
+		<td>{question.type}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.title" /></td>
+		<td>{question.title}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.show_title" /></td>
+		<td>{question.show_title}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.text" /></td>
+		<td>{question.text}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.help_text" /></td>
+		<td>{question.help_text}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.image" /></td>
+		<td>{question.image}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.image_position" /></td>
+		<td>{question.image_position}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.mandatory" /></td>
+		<td>{question.mandatory}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.mandatory_correct" /></td>
+		<td>{question.mandatory_correct}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.dependant_show" /></td>
+		<td>{question.dependant_show}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.open_type" /></td>
+		<td>{question.open_type}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.open_pre_text" /></td>
+		<td>{question.open_pre_text}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.open_in_text" /></td>
+		<td>{question.open_in_text}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.open_post_text" /></td>
+		<td>{question.open_post_text}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.open_validation" /></td>
+		<td>{question.open_validation}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.open_validation_text" /></td>
+		<td>{question.open_validation_text}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.closed_type" /></td>
+		<td>{question.closed_type}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.closed_size" /></td>
+		<td>{question.closed_size}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.closed_max_answers" /></td>
+		<td>{question.closed_max_answers}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.closed_random_answers" /></td>
+		<td>{question.closed_random_answers}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.closed_inputfield" /></td>
+		<td>{question.closed_inputfield}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.matrix_type" /></td>
+		<td>{question.matrix_type}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.matrix_validation" /></td>
+		<td>{question.matrix_validation}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.matrix_max_answers" /></td>
+		<td>{question.matrix_max_answers}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.matrix_inputfield" /></td>
+		<td>{question.matrix_inputfield}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.demographic_type" /></td>
+		<td>{question.demographic_type}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.demographic_fields" /></td>
+		<td>{question.demographic_fields}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.demographic_address_fields" /></td>
+		<td>{question.demographic_address_fields}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.privacy_post" /></td>
+		<td>{question.privacy_post}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.privacy_link" /></td>
+		<td>{question.privacy_link}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.privacy_file" /></td>
+		<td>{question.privacy_file}</td>
+	</tr>
+	<tr>
+		<td><f:translate key="tx_kequestionnaireextbase_domain_model_question.dependancy_simple" /></td>
+		<td>{question.dependancy_simple}</td>
+	</tr>
+</table>
+<f:link.action action="edit" arguments="{question : question}">Edit</f:link.action>
+<f:link.action action="delete" arguments="{question : question}">Delete</f:link.action>
+
+<f:link.action action="index">Back to listing</f:link.action>
+</f:section>

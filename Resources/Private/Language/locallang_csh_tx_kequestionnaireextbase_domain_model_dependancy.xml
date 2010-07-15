@@ -7,10 +7,10 @@
     </meta>
     <data type="array">
         <languageKey index="default" type="array">
-			<label index="activating_formula.description">activating_formula</label>
-			<label index="dependant_question.description">dependant_question</label>
-			<label index="activating_question.description">activating_question</label>
-			<label index="activating_value.description">activating_value</label>
+			<label index="activating_formula.description">activating formula</label>
+			<label index="dependant_question.description">dependantQuestion</label>
+			<label index="activating_question.description">activatingQuestion</label>
+			<label index="activating_value.description">activatingValue</label>
 		</languageKey>
     </data>
 </T3locallang>

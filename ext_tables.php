@@ -7,11 +7,13 @@ Tx_Extbase_Utility_Extension::registerPlugin(
 	'ke Questionnaire ExtBase'
 );
 
+$extensionName = t3lib_div::underscoredToUpperCamelCase($_EXTKEY);
+$pluginSignature = strtolower($extensionName) . '_pi1';
+
 t3lib_extMgm::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'ke Questionnaire ExtBase');
-
-//$TCA['tt_content']['types']['list']['subtypes_addlist'][$_EXTKEY . '_pi1'] = 'pi_flexform';
-//t3lib_extMgm::addPiFlexFormValue($_EXTKEY . '_pi1', 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_list.xml');
-
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_excludelist'][$pluginSignature] = 'pages,layout,select_key,recursive';
+$GLOBALS['TCA']['tt_content']['types']['list']['subtypes_addlist'][$pluginSignature] = 'pi_flexform';
+t3lib_extMgm::addPiFlexFormValue($pluginSignature, 'FILE:EXT:' . $_EXTKEY . '/Configuration/FlexForms/flexform_pi1.xml');
 
 t3lib_extMgm::addLLrefForTCAdescr('tx_kequestionnaireextbase_domain_model_question','EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_csh_tx_kequestionnaireextbase_domain_model_question.xml');
 t3lib_extMgm::allowTableOnStandardPages('tx_kequestionnaireextbase_domain_model_question');

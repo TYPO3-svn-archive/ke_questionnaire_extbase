@@ -35,7 +35,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainO
 	
 	/**
 	 * question type
-	 * @var select
+	 * @var string
 	 * @validate NotEmpty
 	 */
 	protected $type;
@@ -63,7 +63,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainO
 	 * helptext
 	 * @var string
 	 */
-	protected $helptext;
+	protected $help_text;
 	
 	/**
 	 * image
@@ -72,8 +72,8 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainO
 	protected $image;
 	
 	/**
-	 * image_position
-	 * @var select
+	 * image position
+	 * @var string
 	 */
 	protected $image_position;
 	
@@ -84,157 +84,145 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainO
 	protected $mandatory;
 	
 	/**
-	 * mandatory_correct
+	 * mandatory correct
 	 * @var boolean
 	 */
 	protected $mandatory_correct;
 	
 	/**
-	 * time
-	 * @var integer
-	 */
-	protected $time;
-	
-	/**
-	 * dependant_show
+	 * dependant show
 	 * @var integer
 	 */
 	protected $dependant_show;
 	
 	/**
-	 * open_type
-	 * @var select
+	 * open type
+	 * @var string
 	 */
 	protected $open_type;
 	
 	/**
-	 * open_pre_text
+	 * open pre text
 	 * @var string
 	 */
 	protected $open_pre_text;
 	
 	/**
-	 * open_in_text
+	 * open in text
 	 * @var string
 	 */
 	protected $open_in_text;
 	
 	/**
-	 * open_post_text
+	 * open post text
 	 * @var string
 	 */
 	protected $open_post_text;
 	
 	/**
-	 * open_validation
-	 * @var select
+	 * open validation
+	 * @var string
 	 */
 	protected $open_validation;
 	
 	/**
-	 * open_validation_text
+	 * open validation text
 	 * @var string
 	 */
 	protected $open_validation_text;
 	
 	/**
-	 * closed_type
-	 * @var select
+	 * closed type
+	 * @var string
 	 */
 	protected $closed_type;
 	
 	/**
-	 * closed_selectsize
+	 * closed selectsize
 	 * @var integer
 	 */
-	protected $closed_selectsize;
+	protected $closed_size;
 	
 	/**
-	 * closed_maxanswers
+	 * closed max answers
 	 * @var integer
 	 */
-	protected $closed_maxanswers;
+	protected $closed_max_answers;
 	
 	/**
-	 * closed_randomanswers
+	 * closed random answers
 	 * @var boolean
 	 */
-	protected $closed_randomanswers;
+	protected $closed_random_answers;
 	
 	/**
-	 * closed_inputfield
+	 * closed inputfield
 	 * @var integer
 	 */
 	protected $closed_inputfield;
 	
 	/**
-	 * matrix_type
-	 * @var select
+	 * matrix type
+	 * @var string
 	 */
 	protected $matrix_type;
 	
 	/**
-	 * matrix_validation
-	 * @var select
+	 * matrix validation
+	 * @var string
 	 */
 	protected $matrix_validation;
 	
 	/**
-	 * matrix_maxanswers
+	 * matrix max answers
 	 * @var integer
 	 */
-	protected $matrix_maxanswers;
+	protected $matrix_max_answers;
 	
 	/**
-	 * matrix_inputfield
+	 * matrix inputfield
 	 * @var integer
 	 */
 	protected $matrix_inputfield;
 	
 	/**
-	 * demographic_type
-	 * @var select
+	 * demographic type
+	 * @var string
 	 */
 	protected $demographic_type;
 	
 	/**
-	 * demographic_fields
+	 * demographic fields
 	 * @var string
 	 */
 	protected $demographic_fields;
 	
 	/**
-	 * demographic_addressfields
+	 * demographic address fields
 	 * @var string
 	 */
-	protected $demographic_addressfields;
+	protected $demographic_address_fields;
 	
 	/**
-	 * privacy_post
+	 * privacy post
 	 * @var string
 	 */
 	protected $privacy_post;
 	
 	/**
-	 * privacy_link
+	 * privacy link
 	 * @var string
 	 */
 	protected $privacy_link;
 	
 	/**
-	 * privacy_file
+	 * privacy file
 	 * @var string
 	 */
 	protected $privacy_file;
 	
 	/**
-	 * question type
-	 * @var string
-	 */
-	protected $type;
-	
-	/**
-	 * dependancy_simple
+	 * dependancy simple
 	 * @var boolean
 	 */
 	protected $dependancy_simple;
@@ -279,7 +267,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainO
 	/**
 	 * Setter for type
 	 *
-	 * @param select $type question type
+	 * @param string $type question type
 	 * @return void
 	 */
 	public function setType($type) {
@@ -289,7 +277,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainO
 	/**
 	 * Getter for type
 	 *
-	 * @return select question type
+	 * @return string question type
 	 */
 	public function getType() {
 		return $this->type;
@@ -315,31 +303,31 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainO
 	}
 	
 	/**
-	 * Setter for show_title
+	 * Setter for showTitle
 	 *
-	 * @param boolean $show_title show title
+	 * @param boolean $showTitle show title
 	 * @return void
 	 */
-	public function setShow_title($show_title) {
-		$this->show_title = $show_title;
+	public function setShowTitle($showTitle) {
+		$this->showTitle = $showTitle;
 	}
 
 	/**
-	 * Getter for show_title
+	 * Getter for showTitle
 	 *
 	 * @return boolean show title
 	 */
-	public function getShow_title() {
-		return $this->show_title;
+	public function getShowTitle() {
+		return $this->showTitle;
 	}
 	
 	/**
-	 * Returns the boolean state of show_title
+	 * Returns the boolean state of showTitle
 	 *
-	 * @return bool The state of show_title
+	 * @return bool The state of showTitle
 	 */
-	public function isShow_title() {
-		$this->getShow_title();
+	public function isShowTitle() {
+		$this->getShowTitle();
 	}
 	
 	/**
@@ -362,22 +350,22 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainO
 	}
 	
 	/**
-	 * Setter for helptext
+	 * Setter for helpText
 	 *
-	 * @param string $helptext helptext
+	 * @param string $helpText helptext
 	 * @return void
 	 */
-	public function setHelptext($helptext) {
-		$this->helptext = $helptext;
+	public function setHelpText($helpText) {
+		$this->helpText = $helpText;
 	}
 
 	/**
-	 * Getter for helptext
+	 * Getter for helpText
 	 *
 	 * @return string helptext
 	 */
-	public function getHelptext() {
-		return $this->helptext;
+	public function getHelpText() {
+		return $this->helpText;
 	}
 	
 	/**
@@ -400,22 +388,22 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainO
 	}
 	
 	/**
-	 * Setter for image_position
+	 * Setter for imagePosition
 	 *
-	 * @param select $image_position image_position
+	 * @param string $imagePosition image position
 	 * @return void
 	 */
-	public function setImage_position($image_position) {
-		$this->image_position = $image_position;
+	public function setImagePosition($imagePosition) {
+		$this->imagePosition = $imagePosition;
 	}
 
 	/**
-	 * Getter for image_position
+	 * Getter for imagePosition
 	 *
-	 * @return select image_position
+	 * @return string image position
 	 */
-	public function getImage_position() {
-		return $this->image_position;
+	public function getImagePosition() {
+		return $this->imagePosition;
 	}
 	
 	/**
@@ -447,524 +435,486 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_question extends Tx_Extbase_DomainO
 	}
 	
 	/**
-	 * Setter for mandatory_correct
+	 * Setter for mandatoryCorrect
 	 *
-	 * @param boolean $mandatory_correct mandatory_correct
+	 * @param boolean $mandatoryCorrect mandatory correct
 	 * @return void
 	 */
-	public function setMandatory_correct($mandatory_correct) {
-		$this->mandatory_correct = $mandatory_correct;
+	public function setMandatoryCorrect($mandatoryCorrect) {
+		$this->mandatoryCorrect = $mandatoryCorrect;
 	}
 
 	/**
-	 * Getter for mandatory_correct
+	 * Getter for mandatoryCorrect
 	 *
-	 * @return boolean mandatory_correct
+	 * @return boolean mandatory correct
 	 */
-	public function getMandatory_correct() {
-		return $this->mandatory_correct;
+	public function getMandatoryCorrect() {
+		return $this->mandatoryCorrect;
 	}
 	
 	/**
-	 * Returns the boolean state of mandatory_correct
+	 * Returns the boolean state of mandatoryCorrect
 	 *
-	 * @return bool The state of mandatory_correct
+	 * @return bool The state of mandatoryCorrect
 	 */
-	public function isMandatory_correct() {
-		$this->getMandatory_correct();
+	public function isMandatoryCorrect() {
+		$this->getMandatoryCorrect();
 	}
 	
 	/**
-	 * Setter for time
+	 * Setter for dependantShow
 	 *
-	 * @param integer $time time
+	 * @param integer $dependantShow dependant show
 	 * @return void
 	 */
-	public function setTime($time) {
-		$this->time = $time;
+	public function setDependantShow($dependantShow) {
+		$this->dependantShow = $dependantShow;
 	}
 
 	/**
-	 * Getter for time
+	 * Getter for dependantShow
 	 *
-	 * @return integer time
+	 * @return integer dependant show
 	 */
-	public function getTime() {
-		return $this->time;
+	public function getDependantShow() {
+		return $this->dependantShow;
 	}
 	
 	/**
-	 * Setter for dependant_show
+	 * Setter for openType
 	 *
-	 * @param integer $dependant_show dependant_show
+	 * @param string $openType open type
 	 * @return void
 	 */
-	public function setDependant_show($dependant_show) {
-		$this->dependant_show = $dependant_show;
+	public function setOpenType($openType) {
+		$this->openType = $openType;
 	}
 
 	/**
-	 * Getter for dependant_show
+	 * Getter for openType
 	 *
-	 * @return integer dependant_show
+	 * @return string open type
 	 */
-	public function getDependant_show() {
-		return $this->dependant_show;
+	public function getOpenType() {
+		return $this->openType;
 	}
 	
 	/**
-	 * Setter for open_type
+	 * Setter for openPreText
 	 *
-	 * @param select $open_type open_type
+	 * @param string $openPreText open pre text
 	 * @return void
 	 */
-	public function setOpen_type($open_type) {
-		$this->open_type = $open_type;
+	public function setOpenPreText($openPreText) {
+		$this->openPreText = $openPreText;
 	}
 
 	/**
-	 * Getter for open_type
+	 * Getter for openPreText
 	 *
-	 * @return select open_type
+	 * @return string open pre text
 	 */
-	public function getOpen_type() {
-		return $this->open_type;
+	public function getOpenPreText() {
+		return $this->openPreText;
 	}
 	
 	/**
-	 * Setter for open_pre_text
+	 * Setter for openInText
 	 *
-	 * @param string $open_pre_text open_pre_text
+	 * @param string $openInText open in text
 	 * @return void
 	 */
-	public function setOpen_pre_text($open_pre_text) {
-		$this->open_pre_text = $open_pre_text;
+	public function setOpenInText($openInText) {
+		$this->openInText = $openInText;
 	}
 
 	/**
-	 * Getter for open_pre_text
+	 * Getter for openInText
 	 *
-	 * @return string open_pre_text
+	 * @return string open in text
 	 */
-	public function getOpen_pre_text() {
-		return $this->open_pre_text;
+	public function getOpenInText() {
+		return $this->openInText;
 	}
 	
 	/**
-	 * Setter for open_in_text
+	 * Setter for openPostText
 	 *
-	 * @param string $open_in_text open_in_text
+	 * @param string $openPostText open post text
 	 * @return void
 	 */
-	public function setOpen_in_text($open_in_text) {
-		$this->open_in_text = $open_in_text;
+	public function setOpenPostText($openPostText) {
+		$this->openPostText = $openPostText;
 	}
 
 	/**
-	 * Getter for open_in_text
+	 * Getter for openPostText
 	 *
-	 * @return string open_in_text
+	 * @return string open post text
 	 */
-	public function getOpen_in_text() {
-		return $this->open_in_text;
+	public function getOpenPostText() {
+		return $this->openPostText;
 	}
 	
 	/**
-	 * Setter for open_post_text
+	 * Setter for openValidation
 	 *
-	 * @param string $open_post_text open_post_text
+	 * @param string $openValidation open validation
 	 * @return void
 	 */
-	public function setOpen_post_text($open_post_text) {
-		$this->open_post_text = $open_post_text;
+	public function setOpenValidation($openValidation) {
+		$this->openValidation = $openValidation;
 	}
 
 	/**
-	 * Getter for open_post_text
+	 * Getter for openValidation
 	 *
-	 * @return string open_post_text
+	 * @return string open validation
 	 */
-	public function getOpen_post_text() {
-		return $this->open_post_text;
+	public function getOpenValidation() {
+		return $this->openValidation;
 	}
 	
 	/**
-	 * Setter for open_validation
+	 * Setter for openValidationText
 	 *
-	 * @param select $open_validation open_validation
+	 * @param string $openValidationText open validation text
 	 * @return void
 	 */
-	public function setOpen_validation($open_validation) {
-		$this->open_validation = $open_validation;
+	public function setOpenValidationText($openValidationText) {
+		$this->openValidationText = $openValidationText;
 	}
 
 	/**
-	 * Getter for open_validation
+	 * Getter for openValidationText
 	 *
-	 * @return select open_validation
+	 * @return string open validation text
 	 */
-	public function getOpen_validation() {
-		return $this->open_validation;
+	public function getOpenValidationText() {
+		return $this->openValidationText;
 	}
 	
 	/**
-	 * Setter for open_validation_text
+	 * Setter for closedType
 	 *
-	 * @param string $open_validation_text open_validation_text
+	 * @param string $closedType closed type
 	 * @return void
 	 */
-	public function setOpen_validation_text($open_validation_text) {
-		$this->open_validation_text = $open_validation_text;
+	public function setClosedType($closedType) {
+		$this->closedType = $closedType;
 	}
 
 	/**
-	 * Getter for open_validation_text
+	 * Getter for closedType
 	 *
-	 * @return string open_validation_text
+	 * @return string closed type
 	 */
-	public function getOpen_validation_text() {
-		return $this->open_validation_text;
+	public function getClosedType() {
+		return $this->closedType;
 	}
 	
 	/**
-	 * Setter for closed_type
+	 * Setter for closedSize
 	 *
-	 * @param select $closed_type closed_type
+	 * @param integer $closedSize closed selectsize
 	 * @return void
 	 */
-	public function setClosed_type($closed_type) {
-		$this->closed_type = $closed_type;
+	public function setClosedSize($closedSize) {
+		$this->closedSize = $closedSize;
 	}
 
 	/**
-	 * Getter for closed_type
+	 * Getter for closedSize
 	 *
-	 * @return select closed_type
+	 * @return integer closed selectsize
 	 */
-	public function getClosed_type() {
-		return $this->closed_type;
+	public function getClosedSize() {
+		return $this->closedSize;
 	}
 	
 	/**
-	 * Setter for closed_selectsize
+	 * Setter for closedMaxAnswers
 	 *
-	 * @param integer $closed_selectsize closed_selectsize
+	 * @param integer $closedMaxAnswers closed max answers
 	 * @return void
 	 */
-	public function setClosed_selectsize($closed_selectsize) {
-		$this->closed_selectsize = $closed_selectsize;
+	public function setClosedMaxAnswers($closedMaxAnswers) {
+		$this->closedMaxAnswers = $closedMaxAnswers;
 	}
 
 	/**
-	 * Getter for closed_selectsize
+	 * Getter for closedMaxAnswers
 	 *
-	 * @return integer closed_selectsize
+	 * @return integer closed max answers
 	 */
-	public function getClosed_selectsize() {
-		return $this->closed_selectsize;
+	public function getClosedMaxAnswers() {
+		return $this->closedMaxAnswers;
 	}
 	
 	/**
-	 * Setter for closed_maxanswers
+	 * Setter for closedRandomAnswers
 	 *
-	 * @param integer $closed_maxanswers closed_maxanswers
+	 * @param boolean $closedRandomAnswers closed random answers
 	 * @return void
 	 */
-	public function setClosed_maxanswers($closed_maxanswers) {
-		$this->closed_maxanswers = $closed_maxanswers;
+	public function setClosedRandomAnswers($closedRandomAnswers) {
+		$this->closedRandomAnswers = $closedRandomAnswers;
 	}
 
 	/**
-	 * Getter for closed_maxanswers
+	 * Getter for closedRandomAnswers
 	 *
-	 * @return integer closed_maxanswers
+	 * @return boolean closed random answers
 	 */
-	public function getClosed_maxanswers() {
-		return $this->closed_maxanswers;
+	public function getClosedRandomAnswers() {
+		return $this->closedRandomAnswers;
 	}
 	
 	/**
-	 * Setter for closed_randomanswers
+	 * Returns the boolean state of closedRandomAnswers
 	 *
-	 * @param boolean $closed_randomanswers closed_randomanswers
+	 * @return bool The state of closedRandomAnswers
+	 */
+	public function isClosedRandomAnswers() {
+		$this->getClosedRandomAnswers();
+	}
+	
+	/**
+	 * Setter for closedInputfield
+	 *
+	 * @param integer $closedInputfield closed inputfield
 	 * @return void
 	 */
-	public function setClosed_randomanswers($closed_randomanswers) {
-		$this->closed_randomanswers = $closed_randomanswers;
+	public function setClosedInputfield($closedInputfield) {
+		$this->closedInputfield = $closedInputfield;
 	}
 
 	/**
-	 * Getter for closed_randomanswers
+	 * Getter for closedInputfield
 	 *
-	 * @return boolean closed_randomanswers
+	 * @return integer closed inputfield
 	 */
-	public function getClosed_randomanswers() {
-		return $this->closed_randomanswers;
+	public function getClosedInputfield() {
+		return $this->closedInputfield;
 	}
 	
 	/**
-	 * Returns the boolean state of closed_randomanswers
+	 * Setter for matrixType
 	 *
-	 * @return bool The state of closed_randomanswers
-	 */
-	public function isClosed_randomanswers() {
-		$this->getClosed_randomanswers();
-	}
-	
-	/**
-	 * Setter for closed_inputfield
-	 *
-	 * @param integer $closed_inputfield closed_inputfield
+	 * @param string $matrixType matrix type
 	 * @return void
 	 */
-	public function setClosed_inputfield($closed_inputfield) {
-		$this->closed_inputfield = $closed_inputfield;
+	public function setMatrixType($matrixType) {
+		$this->matrixType = $matrixType;
 	}
 
 	/**
-	 * Getter for closed_inputfield
+	 * Getter for matrixType
 	 *
-	 * @return integer closed_inputfield
+	 * @return string matrix type
 	 */
-	public function getClosed_inputfield() {
-		return $this->closed_inputfield;
+	public function getMatrixType() {
+		return $this->matrixType;
 	}
 	
 	/**
-	 * Setter for matrix_type
+	 * Setter for matrixValidation
 	 *
-	 * @param select $matrix_type matrix_type
+	 * @param string $matrixValidation matrix validation
 	 * @return void
 	 */
-	public function setMatrix_type($matrix_type) {
-		$this->matrix_type = $matrix_type;
+	public function setMatrixValidation($matrixValidation) {
+		$this->matrixValidation = $matrixValidation;
 	}
 
 	/**
-	 * Getter for matrix_type
+	 * Getter for matrixValidation
 	 *
-	 * @return select matrix_type
+	 * @return string matrix validation
 	 */
-	public function getMatrix_type() {
-		return $this->matrix_type;
+	public function getMatrixValidation() {
+		return $this->matrixValidation;
 	}
 	
 	/**
-	 * Setter for matrix_validation
+	 * Setter for matrixMaxAnswers
 	 *
-	 * @param select $matrix_validation matrix_validation
+	 * @param integer $matrixMaxAnswers matrix max answers
 	 * @return void
 	 */
-	public function setMatrix_validation($matrix_validation) {
-		$this->matrix_validation = $matrix_validation;
+	public function setMatrixMaxAnswers($matrixMaxAnswers) {
+		$this->matrixMaxAnswers = $matrixMaxAnswers;
 	}
 
 	/**
-	 * Getter for matrix_validation
+	 * Getter for matrixMaxAnswers
 	 *
-	 * @return select matrix_validation
+	 * @return integer matrix max answers
 	 */
-	public function getMatrix_validation() {
-		return $this->matrix_validation;
+	public function getMatrixMaxAnswers() {
+		return $this->matrixMaxAnswers;
 	}
 	
 	/**
-	 * Setter for matrix_maxanswers
+	 * Setter for matrixInputfield
 	 *
-	 * @param integer $matrix_maxanswers matrix_maxanswers
+	 * @param integer $matrixInputfield matrix inputfield
 	 * @return void
 	 */
-	public function setMatrix_maxanswers($matrix_maxanswers) {
-		$this->matrix_maxanswers = $matrix_maxanswers;
+	public function setMatrixInputfield($matrixInputfield) {
+		$this->matrixInputfield = $matrixInputfield;
 	}
 
 	/**
-	 * Getter for matrix_maxanswers
+	 * Getter for matrixInputfield
 	 *
-	 * @return integer matrix_maxanswers
+	 * @return integer matrix inputfield
 	 */
-	public function getMatrix_maxanswers() {
-		return $this->matrix_maxanswers;
+	public function getMatrixInputfield() {
+		return $this->matrixInputfield;
 	}
 	
 	/**
-	 * Setter for matrix_inputfield
+	 * Setter for demographicType
 	 *
-	 * @param integer $matrix_inputfield matrix_inputfield
+	 * @param string $demographicType demographic type
 	 * @return void
 	 */
-	public function setMatrix_inputfield($matrix_inputfield) {
-		$this->matrix_inputfield = $matrix_inputfield;
+	public function setDemographicType($demographicType) {
+		$this->demographicType = $demographicType;
 	}
 
 	/**
-	 * Getter for matrix_inputfield
+	 * Getter for demographicType
 	 *
-	 * @return integer matrix_inputfield
+	 * @return string demographic type
 	 */
-	public function getMatrix_inputfield() {
-		return $this->matrix_inputfield;
+	public function getDemographicType() {
+		return $this->demographicType;
 	}
 	
 	/**
-	 * Setter for demographic_type
+	 * Setter for demographicFields
 	 *
-	 * @param select $demographic_type demographic_type
+	 * @param string $demographicFields demographic fields
 	 * @return void
 	 */
-	public function setDemographic_type($demographic_type) {
-		$this->demographic_type = $demographic_type;
+	public function setDemographicFields($demographicFields) {
+		$this->demographicFields = $demographicFields;
 	}
 
 	/**
-	 * Getter for demographic_type
+	 * Getter for demographicFields
 	 *
-	 * @return select demographic_type
+	 * @return string demographic fields
 	 */
-	public function getDemographic_type() {
-		return $this->demographic_type;
+	public function getDemographicFields() {
+		return $this->demographicFields;
 	}
 	
 	/**
-	 * Setter for demographic_fields
+	 * Setter for demographicAddressFields
 	 *
-	 * @param string $demographic_fields demographic_fields
+	 * @param string $demographicAddressFields demographic address fields
 	 * @return void
 	 */
-	public function setDemographic_fields($demographic_fields) {
-		$this->demographic_fields = $demographic_fields;
+	public function setDemographicAddressFields($demographicAddressFields) {
+		$this->demographicAddressFields = $demographicAddressFields;
 	}
 
 	/**
-	 * Getter for demographic_fields
+	 * Getter for demographicAddressFields
 	 *
-	 * @return string demographic_fields
+	 * @return string demographic address fields
 	 */
-	public function getDemographic_fields() {
-		return $this->demographic_fields;
+	public function getDemographicAddressFields() {
+		return $this->demographicAddressFields;
 	}
 	
 	/**
-	 * Setter for demographic_addressfields
+	 * Setter for privacyPost
 	 *
-	 * @param string $demographic_addressfields demographic_addressfields
+	 * @param string $privacyPost privacy post
 	 * @return void
 	 */
-	public function setDemographic_addressfields($demographic_addressfields) {
-		$this->demographic_addressfields = $demographic_addressfields;
+	public function setPrivacyPost($privacyPost) {
+		$this->privacyPost = $privacyPost;
 	}
 
 	/**
-	 * Getter for demographic_addressfields
+	 * Getter for privacyPost
 	 *
-	 * @return string demographic_addressfields
+	 * @return string privacy post
 	 */
-	public function getDemographic_addressfields() {
-		return $this->demographic_addressfields;
+	public function getPrivacyPost() {
+		return $this->privacyPost;
 	}
 	
 	/**
-	 * Setter for privacy_post
+	 * Setter for privacyLink
 	 *
-	 * @param string $privacy_post privacy_post
+	 * @param string $privacyLink privacy link
 	 * @return void
 	 */
-	public function setPrivacy_post($privacy_post) {
-		$this->privacy_post = $privacy_post;
+	public function setPrivacyLink($privacyLink) {
+		$this->privacyLink = $privacyLink;
 	}
 
 	/**
-	 * Getter for privacy_post
+	 * Getter for privacyLink
 	 *
-	 * @return string privacy_post
+	 * @return string privacy link
 	 */
-	public function getPrivacy_post() {
-		return $this->privacy_post;
+	public function getPrivacyLink() {
+		return $this->privacyLink;
 	}
 	
 	/**
-	 * Setter for privacy_link
+	 * Setter for privacyFile
 	 *
-	 * @param string $privacy_link privacy_link
+	 * @param string $privacyFile privacy file
 	 * @return void
 	 */
-	public function setPrivacy_link($privacy_link) {
-		$this->privacy_link = $privacy_link;
+	public function setPrivacyFile($privacyFile) {
+		$this->privacyFile = $privacyFile;
 	}
 
 	/**
-	 * Getter for privacy_link
+	 * Getter for privacyFile
 	 *
-	 * @return string privacy_link
+	 * @return string privacy file
 	 */
-	public function getPrivacy_link() {
-		return $this->privacy_link;
+	public function getPrivacyFile() {
+		return $this->privacyFile;
 	}
 	
 	/**
-	 * Setter for privacy_file
+	 * Setter for dependancySimple
 	 *
-	 * @param string $privacy_file privacy_file
+	 * @param boolean $dependancySimple dependancy simple
 	 * @return void
 	 */
-	public function setPrivacy_file($privacy_file) {
-		$this->privacy_file = $privacy_file;
+	public function setDependancySimple($dependancySimple) {
+		$this->dependancySimple = $dependancySimple;
 	}
 
 	/**
-	 * Getter for privacy_file
+	 * Getter for dependancySimple
 	 *
-	 * @return string privacy_file
+	 * @return boolean dependancy simple
 	 */
-	public function getPrivacy_file() {
-		return $this->privacy_file;
+	public function getDependancySimple() {
+		return $this->dependancySimple;
 	}
 	
 	/**
-	 * Setter for type
+	 * Returns the boolean state of dependancySimple
 	 *
-	 * @param string $type question type
-	 * @return void
+	 * @return bool The state of dependancySimple
 	 */
-	public function setType($type) {
-		$this->type = $type;
-	}
-
-	/**
-	 * Getter for type
-	 *
-	 * @return string question type
-	 */
-	public function getType() {
-		return $this->type;
-	}
-	
-	/**
-	 * Setter for dependancy_simple
-	 *
-	 * @param boolean $dependancy_simple dependancy_simple
-	 * @return void
-	 */
-	public function setDependancy_simple($dependancy_simple) {
-		$this->dependancy_simple = $dependancy_simple;
-	}
-
-	/**
-	 * Getter for dependancy_simple
-	 *
-	 * @return boolean dependancy_simple
-	 */
-	public function getDependancy_simple() {
-		return $this->dependancy_simple;
-	}
-	
-	/**
-	 * Returns the boolean state of dependancy_simple
-	 *
-	 * @return bool The state of dependancy_simple
-	 */
-	public function isDependancy_simple() {
-		$this->getDependancy_simple();
+	public function isDependancySimple() {
+		$this->getDependancySimple();
 	}
 	
 	/**

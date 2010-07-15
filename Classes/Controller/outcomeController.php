@@ -33,7 +33,7 @@
  */
 
 // TODO: As your extension matures, you should use Tx_Extbase_MVC_Controller_ActionController as base class, instead of the ScaffoldingController used below.
-class Tx_KeQuestionnaireExtbase_Controller_outcomeController extends Tx_ExtbaseKickstarter_Scaffolding_AbstractScaffoldingController {
+class Tx_KeQuestionnaireExtbase_Controller_outcomeController extends Tx_Extbase_MVC_Controller_ActionController {
 	
 	/**
 	 * @var Tx_KeQuestionnaireExtbase_Domain_Repository_outcomeRepository
@@ -48,8 +48,75 @@ class Tx_KeQuestionnaireExtbase_Controller_outcomeController extends Tx_ExtbaseK
 	protected function initializeAction() {
 		$this->outcomeRepository = t3lib_div::makeInstance('Tx_KeQuestionnaireExtbase_Domain_Repository_outcomeRepository');
 	}
-	##TOKEN FOR SCAFFOLDING. Will be replaced by the necessary actions for Create, Read, Update and Delete queries by the kickstarter, when using scaffold2file.
-	# DO NOT REMOVE THIS TOKEN!##
+	/**
+	 * List action for this controller. Displays all outcomes.
+	 */
+	public function indexAction() {
+		$outcomes = $this->outcomeRepository->findAll();
+		$this->view->assign('outcomes', $outcomes);
+	}
+
+	/**
+	 * Action that displays a single outcome
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_outcome $outcome The outcome to display
+	 */
+	public function showAction(Tx_KeQuestionnaireExtbase_Domain_Model_outcome $outcome) {
+		$this->view->assign('outcome', $outcome);
+	}
+
+	/**
+	 * Displays a form for creating a new outcome
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_outcome $newoutcome A fresh outcome object taken as a basis for the rendering
+	 * @dontvalidate $newoutcome
+	 */
+	public function newAction(Tx_KeQuestionnaireExtbase_Domain_Model_outcome $newoutcome = NULL) {
+		$this->view->assign('newoutcome', $newoutcome);
+	}
+
+	/**
+	 * Creates a new outcome and forwards to the index action.
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_outcome $newoutcome A fresh outcome object which has not yet been added to the repository
+	 */
+	public function createAction(Tx_KeQuestionnaireExtbase_Domain_Model_outcome $newoutcome) {
+		$this->outcomeRepository->add($newoutcome);
+		$this->flashMessageContainer->add('Your new outcome was created.');
+		$this->redirect('index');
+	}
+
+	/**
+	 * Displays a form to edit an existing outcome
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_outcome $outcome The outcome to display
+	 * @dontvalidate $outcome
+	 */
+	public function editAction(Tx_KeQuestionnaireExtbase_Domain_Model_outcome $outcome) {
+		$this->view->assign('outcome', $outcome);
+	}
+
+	/**
+	 * Updates an existing outcome and forwards to the index action afterwards.
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_outcome $outcome The outcome to display
+	 */
+	public function updateAction(Tx_KeQuestionnaireExtbase_Domain_Model_outcome $outcome) {
+		$this->outcomeRepository->update($outcome);
+		$this->flashMessageContainer->add('Your outcome was updated.');
+		$this->redirect('index');
+	}
+
+	/**
+	 * Deletes an existing outcome
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_outcome $outcome The outcome to be deleted
+	 */
+	public function deleteAction(Tx_KeQuestionnaireExtbase_Domain_Model_outcome $outcome) {
+		$this->outcomeRepository->remove($outcome);
+		$this->flashMessageContainer->add('Your outcome was removed.');
+		$this->redirect('index');
+	}
 	
 
 	

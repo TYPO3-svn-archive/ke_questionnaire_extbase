@@ -33,7 +33,7 @@
  */
 
 // TODO: As your extension matures, you should use Tx_Extbase_MVC_Controller_ActionController as base class, instead of the ScaffoldingController used below.
-class Tx_KeQuestionnaireExtbase_Controller_authcodeController extends Tx_ExtbaseKickstarter_Scaffolding_AbstractScaffoldingController {
+class Tx_KeQuestionnaireExtbase_Controller_authcodeController extends Tx_Extbase_MVC_Controller_ActionController {
 	
 	/**
 	 * @var Tx_KeQuestionnaireExtbase_Domain_Repository_authcodeRepository
@@ -48,8 +48,75 @@ class Tx_KeQuestionnaireExtbase_Controller_authcodeController extends Tx_Extbase
 	protected function initializeAction() {
 		$this->authcodeRepository = t3lib_div::makeInstance('Tx_KeQuestionnaireExtbase_Domain_Repository_authcodeRepository');
 	}
-	##TOKEN FOR SCAFFOLDING. Will be replaced by the necessary actions for Create, Read, Update and Delete queries by the kickstarter, when using scaffold2file.
-	# DO NOT REMOVE THIS TOKEN!##
+	/**
+	 * List action for this controller. Displays all authcodes.
+	 */
+	public function indexAction() {
+		$authcodes = $this->authcodeRepository->findAll();
+		$this->view->assign('authcodes', $authcodes);
+	}
+
+	/**
+	 * Action that displays a single authcode
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_authcode $authcode The authcode to display
+	 */
+	public function showAction(Tx_KeQuestionnaireExtbase_Domain_Model_authcode $authcode) {
+		$this->view->assign('authcode', $authcode);
+	}
+
+	/**
+	 * Displays a form for creating a new authcode
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_authcode $newauthcode A fresh authcode object taken as a basis for the rendering
+	 * @dontvalidate $newauthcode
+	 */
+	public function newAction(Tx_KeQuestionnaireExtbase_Domain_Model_authcode $newauthcode = NULL) {
+		$this->view->assign('newauthcode', $newauthcode);
+	}
+
+	/**
+	 * Creates a new authcode and forwards to the index action.
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_authcode $newauthcode A fresh authcode object which has not yet been added to the repository
+	 */
+	public function createAction(Tx_KeQuestionnaireExtbase_Domain_Model_authcode $newauthcode) {
+		$this->authcodeRepository->add($newauthcode);
+		$this->flashMessageContainer->add('Your new authcode was created.');
+		$this->redirect('index');
+	}
+
+	/**
+	 * Displays a form to edit an existing authcode
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_authcode $authcode The authcode to display
+	 * @dontvalidate $authcode
+	 */
+	public function editAction(Tx_KeQuestionnaireExtbase_Domain_Model_authcode $authcode) {
+		$this->view->assign('authcode', $authcode);
+	}
+
+	/**
+	 * Updates an existing authcode and forwards to the index action afterwards.
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_authcode $authcode The authcode to display
+	 */
+	public function updateAction(Tx_KeQuestionnaireExtbase_Domain_Model_authcode $authcode) {
+		$this->authcodeRepository->update($authcode);
+		$this->flashMessageContainer->add('Your authcode was updated.');
+		$this->redirect('index');
+	}
+
+	/**
+	 * Deletes an existing authcode
+	 *
+	 * @param Tx_KeQuestionnaireExtbase_Domain_Model_authcode $authcode The authcode to be deleted
+	 */
+	public function deleteAction(Tx_KeQuestionnaireExtbase_Domain_Model_authcode $authcode) {
+		$this->authcodeRepository->remove($authcode);
+		$this->flashMessageContainer->add('Your authcode was removed.');
+		$this->redirect('index');
+	}
 	
 
 	
