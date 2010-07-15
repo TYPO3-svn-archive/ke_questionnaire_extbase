@@ -59,12 +59,23 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 			)
 		),
 		'type' => array(
-			'exclude' => 0,
-			'label'   => 'LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.type',
-			'config'  => array(
-				'type' => 'input',
-				'size' => 30,
-				'eval' => 'trim,required'
+			"exclude" => 0,
+			"label"   => "LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_db.xml:tx_kequestionnaireextbase_domain_model_question.type",
+			"config"  => Array (
+				"type" => "select",
+				"items" => Array (
+					/*Array("LLL:EXT:ke_questionnaire/locallang_db.xml:tx_kequestionnaire_questions.type.I.open", "open"),
+					Array("LLL:EXT:ke_questionnaire/locallang_db.xml:tx_kequestionnaire_questions.type.I.closed", "closed"),
+					Array("LLL:EXT:ke_questionnaire/locallang_db.xml:tx_kequestionnaire_questions.type.I.matrix", "matrix"),
+					Array("LLL:EXT:ke_questionnaire/locallang_db.xml:tx_kequestionnaire_questions.type.I.semantic", "semantic"),
+					Array("LLL:EXT:ke_questionnaire/locallang_db.xml:tx_kequestionnaire_questions.type.I.demographic", "demographic"),
+					Array("LLL:EXT:ke_questionnaire/locallang_db.xml:tx_kequestionnaire_questions.type.I.privacy", "privacy"),
+					Array("LLL:EXT:ke_questionnaire/locallang_db.xml:tx_kequestionnaire_questions.type.I.blind", "blind"),*/
+				),
+                                'default' => 'blind',
+				"itemsProcFunc" => "tx_kequestionnaireextbase_utility_questiontype->tcaList",
+				"size" => 1,
+				"maxitems" => 1,
 			)
 		),
 		'title' => array(
