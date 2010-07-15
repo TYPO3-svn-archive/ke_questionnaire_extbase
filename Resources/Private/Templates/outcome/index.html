@@ -1,0 +1,37 @@
+<f:layout name="default" />
+
+This Template is responsible for creating a table of domain objects.
+
+<f:section name="main">
+<h1>Listing for outcome</h1>
+
+<f:flashMessages />
+
+<table>
+	<tr>
+		<th><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.title" /></th>
+		<th><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.value_start" /></th>
+		<th><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.value_end" /></th>
+		<th><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.text" /></th>
+		<th><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.image" /></th>
+		<th><f:translate key="tx_kequestionnaireextbase_domain_model_outcome.image_position" /></th>
+		<th> </th>
+		<th> </th>
+	</tr>
+
+	<f:for each="{outcomes}" as="outcome">
+		<tr>
+			<td><f:link.action action="show" arguments="{outcome : outcome}"> {outcome.title}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{outcome : outcome}"> {outcome.value_start}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{outcome : outcome}"> {outcome.value_end}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{outcome : outcome}"> {outcome.text}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{outcome : outcome}"> {outcome.image}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{outcome : outcome}"> {outcome.image_position}</f:link.action></td>
+			<td><f:link.action action="edit" arguments="{outcome : outcome}">Edit</f:link.action></td>
+			<td><f:link.action action="delete" arguments="{outcome : outcome}">Delete</f:link.action></td>
+		</tr>
+	</f:for>
+</table>
+
+<f:link.action action="new">New outcome</f:link.action>
+</f:section>

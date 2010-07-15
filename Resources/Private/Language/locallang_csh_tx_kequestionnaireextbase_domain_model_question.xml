@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+    <meta type="array">
+        <description>Ontext Sensitive Help (CSH) for table tx_kequestionnaireextbase_domain_model_question</description>
+        <type>CSH</type>
+        <csh_table>tx_kequestionnaireextbase_domain_model_question</csh_table>
+    </meta>
+    <data type="array">
+        <languageKey index="default" type="array">
+			<label index="type.description">question type</label>
+			<label index="title.description">title</label>
+			<label index="show_title.description">show title</label>
+			<label index="text.description">text</label>
+			<label index="help_text.description">helptext</label>
+			<label index="image.description">image</label>
+			<label index="image_position.description">image position</label>
+			<label index="mandatory.description">mandatory</label>
+			<label index="mandatory_correct.description">mandatory correct</label>
+			<label index="dependant_show.description">dependant show</label>
+			<label index="open_type.description">open type</label>
+			<label index="open_pre_text.description">open pre text</label>
+			<label index="open_in_text.description">open in text</label>
+			<label index="open_post_text.description">open post text</label>
+			<label index="open_validation.description">open validation</label>
+			<label index="open_validation_text.description">open validation text</label>
+			<label index="closed_type.description">closed type</label>
+			<label index="closed_size.description">closed selectsize</label>
+			<label index="closed_max_answers.description">closed max answers</label>
+			<label index="closed_random_answers.description">closed random answers</label>
+			<label index="closed_inputfield.description">closed inputfield</label>
+			<label index="matrix_type.description">matrix type</label>
+			<label index="matrix_validation.description">matrix validation</label>
+			<label index="matrix_max_answers.description">matrix max answers</label>
+			<label index="matrix_inputfield.description">matrix inputfield</label>
+			<label index="demographic_type.description">demographic type</label>
+			<label index="demographic_fields.description">demographic fields</label>
+			<label index="demographic_address_fields.description">demographic address fields</label>
+			<label index="privacy_post.description">privacy post</label>
+			<label index="privacy_link.description">privacy link</label>
+			<label index="privacy_file.description">privacy file</label>
+			<label index="dependancy_simple.description">dependancy simple</label>
+			<label index="answers.description">answers</label>
+			<label index="columns.description">columns</label>
+			<label index="subquestions.description">subquestions</label>
+			<label index="sublines.description">sublines</label>
+		</languageKey>
+    </data>
+</T3locallang>
