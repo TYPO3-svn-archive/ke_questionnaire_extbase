@@ -30,6 +30,6 @@
  * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class Tx_KeQuestionnaireExtbase_Domain_Model_OpenQuestion extends Tx_KeQuestionnaireExtbase_Domain_Model_Question {
+class Tx_KeQuestionnaireExtbase_Domain_Model_Question_OpenQuestion extends Tx_KeQuestionnaireExtbase_Domain_Model_Question {
 }
 ?>

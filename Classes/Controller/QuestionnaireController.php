@@ -46,14 +46,16 @@ class Tx_KeQuestionnaireExtbase_Controller_QuestionnaireController extends Tx_Ex
 	 */
 	protected function initializeAction() {
 		$this->questionRepository = t3lib_div::makeInstance('Tx_KeQuestionnaireExtbase_Domain_Repository_QuestionRepository');
-		t3lib_div::devLog('settings', 'test' , 0, $this->settings);
+		//t3lib_div::devLog('settings', 'test' , 0, $this->settings);
 	}
 	/**
 	 * List action for this controller. Displays all questions.
 	 */
 	public function indexAction() {
 		$questions = $this->questionRepository->findAll();
-		t3lib_div::devLog('questions', 'test' , 0, $questions);
+		t3lib_div::devLog('questions', 'test' , 0, array($questions[0]->getType(),get_class($questions[0])));
+		t3lib_div::devLog('questions', 'test' , 0, array($questions[1]->getType(),get_class($questions[1])));
+		t3lib_div::debug($questions);
 		$this->view->assign('questions', $questions);
         }	
 }

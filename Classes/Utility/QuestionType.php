@@ -36,8 +36,8 @@ class Tx_KeQuestionnaireExtbase_Utility_QuestionType {
     function tcaList (&$params,&$pObj){
         t3lib_div::devLog('doooof', 'tca', 0, array($params));
         $params['items'] = array();
-        $params['items'][] = array('open','Tx_KeQuestionnaireExtbase_OpenQuestion');
-        $params['items'][] = array('closed','Tx_KeQuestionnaireExtbase_ClosedQuestion');
+        $params['items'][] = array('open','Tx_KeQuestionnaireExtbase_Domain_Model_Question_OpenQuestion');
+        $params['items'][] = array('closed','Tx_KeQuestionnaireExtbase_Domain_Model_Question_ClosedQuestion');
     }
 }
 ?>
