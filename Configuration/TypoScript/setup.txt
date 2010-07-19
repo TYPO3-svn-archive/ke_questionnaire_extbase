@@ -20,3 +20,21 @@ plugin.tx_kequestionnaireextbase._CSS_DEFAULT_STYLE (
 		vertical-align:top;
 	}
 )
+
+#######################################################
+# Class-Definitions for Inheritance
+config.tx_extbase.persistence.classes{
+	Tx_KeQuestionnaireExtbase_Domain_Model_OpenQuestion {
+		mapping {
+			tableName = tx_kequestionnaireextbase_question
+			recordType = Tx_KeQuestionnaireExtbase_OpenQuestion
+		}
+	}
+	
+	Tx_KeQuestionnaireExtbase_Domain_Model_ClosedQuestion {
+		mapping {
+			tableName = tx_kequestionnaireextbase_question
+			recordType = Tx_KeQuestionnaireExtbase_ClosedQuestion
+		}
+	}
+}

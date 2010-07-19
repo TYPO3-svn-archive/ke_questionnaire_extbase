@@ -32,6 +32,11 @@
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
 class Tx_KeQuestionnaireExtbase_Domain_Model_Question extends Tx_Extbase_DomainObject_AbstractEntity {
+	/**
+	 * sorting
+	 * @var integer
+	 */
+	protected $sorting;
 	
 	/**
 	 * question type
@@ -91,7 +96,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_Question extends Tx_Extbase_DomainO
 	
 	/**
 	 * dependant show
-	 * @var integer
+	 * @var boolean
 	 */
 	protected $dependant_show;
 	
@@ -262,6 +267,25 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_Question extends Tx_Extbase_DomainO
 		$this->subquestions = new Tx_Extbase_Persistence_ObjectStorage();
 		
 		$this->sublines = new Tx_Extbase_Persistence_ObjectStorage();
+	}
+	
+	/**
+	 * Setter for sorting
+	 *
+	 * @param integer $sorting sorting
+	 * @return void
+	 */
+	public function setSorting($sorting) {
+		$this->sorting = $sorting;
+	}
+
+	/**
+	 * Getter for sorting
+	 *
+	 * @return integer sorting
+	 */
+	public function getSorting() {
+		return $this->sorting;
 	}
 	
 	/**
@@ -465,7 +489,7 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_Question extends Tx_Extbase_DomainO
 	/**
 	 * Setter for dependantShow
 	 *
-	 * @param integer $dependantShow dependant show
+	 * @param boolean $dependantShow dependant show
 	 * @return void
 	 */
 	public function setDependantShow($dependantShow) {
@@ -475,9 +499,18 @@ class Tx_KeQuestionnaireExtbase_Domain_Model_Question extends Tx_Extbase_DomainO
 	/**
 	 * Getter for dependantShow
 	 *
-	 * @return integer dependant show
+	 * @return boolean dependant show
 	 */
 	public function getDependantShow() {
+		return $this->dependantShow;
+	}
+	
+	/**
+	 * Returns the boolean state of dependantShow
+	 *
+	 * @return bool The state of dependantShow
+	 */
+	public function isDependantShow() {
 		return $this->dependantShow;
 	}
 	

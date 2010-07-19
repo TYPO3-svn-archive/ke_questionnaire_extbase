@@ -1,34 +1,34 @@
 CREATE TABLE tx_kequestionnaireextbase_domain_model_question (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+	type varchar(255) DEFAULT '0' NOT NULL,
+        sorting int(11) DEFAULT '0' NOT NULL,
 	
-	
-	type tinytext,
 	title tinytext,
 	show_title tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	text tinytext,
 	help_text tinytext,
 	image tinytext,
-	image_position tinytext,
+	image_position varchar(255) DEFAULT '0' NOT NULL,
 	mandatory tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	mandatory_correct tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	dependant_show int(11) DEFAULT '0' NOT NULL,
-	open_type tinytext,
+	open_type varchar(255) DEFAULT '0' NOT NULL,
 	open_pre_text tinytext,
 	open_in_text tinytext,
 	open_post_text tinytext,
-	open_validation tinytext,
+	open_validation varchar(255) DEFAULT '0' NOT NULL,
 	open_validation_text tinytext,
-	closed_type tinytext,
+	closed_type varchar(255) DEFAULT '0' NOT NULL,
 	closed_size int(11) DEFAULT '0' NOT NULL,
 	closed_max_answers int(11) DEFAULT '0' NOT NULL,
 	closed_random_answers tinyint(1) unsigned DEFAULT '0' NOT NULL,
 	closed_inputfield int(11) DEFAULT '0' NOT NULL,
-	matrix_type tinytext,
+	matrix_type varchar(255) DEFAULT '0' NOT NULL,
 	matrix_validation tinytext,
 	matrix_max_answers int(11) DEFAULT '0' NOT NULL,
 	matrix_inputfield int(11) DEFAULT '0' NOT NULL,
-	demographic_type tinytext,
+	demographic_type varchar(255) DEFAULT '0' NOT NULL,
 	demographic_fields tinytext,
 	demographic_address_fields tinytext,
 	privacy_post tinytext,
@@ -66,6 +66,7 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_question (
 CREATE TABLE tx_kequestionnaireextbase_domain_model_answer (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+        sorting int(11) DEFAULT '0' NOT NULL,
 	
 	question int(11) unsigned DEFAULT '0' NOT NULL,
 	
@@ -75,7 +76,7 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_answer (
 	text tinytext,
 	help_text tinytext,
 	image tinytext,
-	image_position tinytext,
+	image_position varchar(255) DEFAULT '0' NOT NULL,
 	finish_page_uid int(11) DEFAULT '0' NOT NULL,
 	show_input tinyint(1) unsigned DEFAULT '0' NOT NULL,
 
@@ -105,14 +106,15 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_answer (
 CREATE TABLE tx_kequestionnaireextbase_domain_model_column (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+        sorting int(11) DEFAULT '0' NOT NULL,
 	
 	question int(11) unsigned DEFAULT '0' NOT NULL,
 	
 	title tinytext,
-	different_type tinytext,
+	different_type varchar(255) DEFAULT '0' NOT NULL,
 	max_answers int(11) DEFAULT '0' NOT NULL,
 	image tinytext,
-	image_position tinytext,
+	image_position varchar(255) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -140,6 +142,7 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_column (
 CREATE TABLE tx_kequestionnaireextbase_domain_model_subquestion (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+        sorting int(11) DEFAULT '0' NOT NULL,
 	
 	question int(11) unsigned DEFAULT '0' NOT NULL,
 	
@@ -147,7 +150,7 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_subquestion (
 	title tinytext,
 	text tinytext,
 	image tinytext,
-	image_position tinytext,
+	image_position varchar(255) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -175,6 +178,7 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_subquestion (
 CREATE TABLE tx_kequestionnaireextbase_domain_model_subline (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+        sorting int(11) DEFAULT '0' NOT NULL,
 	
 	question int(11) unsigned DEFAULT '0' NOT NULL,
 	
@@ -207,6 +211,7 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_subline (
 CREATE TABLE tx_kequestionnaireextbase_domain_model_dependancy (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+        sorting int(11) DEFAULT '0' NOT NULL,
 	
 	
 	activating_formula tinytext,
@@ -240,6 +245,7 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_dependancy (
 CREATE TABLE tx_kequestionnaireextbase_domain_model_outcome (
 	uid int(11) NOT NULL auto_increment,
 	pid int(11) DEFAULT '0' NOT NULL,
+        sorting int(11) DEFAULT '0' NOT NULL,
 	
 	
 	title tinytext,
@@ -247,7 +253,7 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_outcome (
 	value_end int(11) DEFAULT '0' NOT NULL,
 	text tinytext,
 	image tinytext,
-	image_position tinytext,
+	image_position varchar(255) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -278,8 +284,8 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_authcode (
 	
 	
 	qpid int(11) DEFAULT '0' NOT NULL,
-	authcode tinytext,
-	email tinytext,
+	authcode varchar(255) DEFAULT '0' NOT NULL,
+	email varchar(255) DEFAULT '0' NOT NULL,
 	feuser int(11) DEFAULT '0' NOT NULL,
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
@@ -314,8 +320,8 @@ CREATE TABLE tx_kequestionnaireextbase_domain_model_result (
 	last_tstamp int(11) DEFAULT '0' NOT NULL,
 	finished_tstamp int(11) DEFAULT '0' NOT NULL,
 	xmldata tinytext,
-	ip tinytext,
-	mailsent_tstamp tinytext,
+	ip varchar(255) DEFAULT '0' NOT NULL,
+	mailsent_tstamp int(11) DEFAULT '0' NOT NULL,
 	auth int(11) unsigned DEFAULT '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
