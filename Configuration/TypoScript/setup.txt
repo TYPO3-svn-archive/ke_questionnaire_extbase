@@ -34,6 +34,7 @@ config.tx_extbase.persistence.classes{
 			Tx_KeQuestionnaireExtbase_Domain_Model_Question_ClosedQuestion = Tx_KeQuestionnaireExtbase_Domain_Model_Question_ClosedQuestion
 		}
 	}
+	
 	Tx_KeQuestionnaireExtbase_Domain_Model_Question_OpenQuestion {
 		mapping {
 			tableName = tx_kequestionnaireextbase_domain_model_question
