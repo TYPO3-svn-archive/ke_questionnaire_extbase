@@ -1,5 +1,4 @@
 <?php
-
 /***************************************************************
 *  Copyright notice
 *
@@ -25,36 +24,12 @@
 ***************************************************************/
 
 /**
- * Controller for the questionnaire object
+ * questions
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-
-class Tx_KeQuestionnaireExtbase_Controller_QuestionnaireController extends Tx_Extbase_MVC_Controller_ActionController {
-	
-	/**
-	 * @var Tx_KeQuestionnaireExtbase_Domain_Repository_questionRepository
-	 */
-	protected $questionRepository;
-
-	/**
-	 * Initializes the current action
-	 *
-	 * @return void
-	 */
-	protected function initializeAction() {
-		$this->questionRepository = t3lib_div::makeInstance('Tx_KeQuestionnaireExtbase_Domain_Repository_QuestionRepository');
-		//t3lib_div::devLog('settings', 'test' , 0, $this->settings);
-	}
-	/**
-	 * List action for this controller. Displays all questions.
-	 */
-	public function indexAction() {
-		$questions = $this->questionRepository->findAll();
-		t3lib_div::debug($questions);
-		$this->view->assign('questions', $questions);
-        }	
+class Tx_KeQuestionnaireExtbase_Domain_Model_Question_BlindQuestion extends Tx_KeQuestionnaireExtbase_Domain_Model_Question {
 }
 ?>

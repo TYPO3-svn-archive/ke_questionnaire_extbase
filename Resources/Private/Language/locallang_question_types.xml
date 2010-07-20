@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for the ke Questionnaire ExtBase extension in the FRONTEND</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="Tx_KeQuestionnaireExtbase_Domain_Model_Question_BlindQuestion">blind</label>
+			<label index="Tx_KeQuestionnaireExtbase_Domain_Model_Question_OpenQuestion">open</label>
+			<label index="Tx_KeQuestionnaireExtbase_Domain_Model_Question_ClosedQuestion">closed</label>
+		</languageKey>
+	</data>
+</T3locallang>

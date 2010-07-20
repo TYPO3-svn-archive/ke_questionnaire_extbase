@@ -72,7 +72,7 @@ $TCA['tx_kequestionnaireextbase_domain_model_question'] = array(
 					Array("LLL:EXT:ke_questionnaire/locallang_db.xml:tx_kequestionnaire_questions.type.I.privacy", "privacy"),
 					Array("LLL:EXT:ke_questionnaire/locallang_db.xml:tx_kequestionnaire_questions.type.I.blind", "blind"),*/
 				),
-                                'default' => 'blind',
+                'default' => 'Tx_KeQuestionnaireExtbase_Domain_Model_Question_BlindQuestion',
 				"itemsProcFunc" => "tx_kequestionnaireextbase_utility_questiontype->tcaList",
 				"size" => 1,
 				"maxitems" => 1,

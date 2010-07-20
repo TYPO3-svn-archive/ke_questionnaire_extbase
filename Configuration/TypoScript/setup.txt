@@ -25,11 +25,8 @@ plugin.tx_kequestionnaireextbase._CSS_DEFAULT_STYLE (
 # Class-Definitions for Inheritance
 config.tx_extbase.persistence.classes{
 	Tx_KeQuestionnaireExtbase_Domain_Model_Question {
-		#mapping {
-		#	tableName = tx_kequestionnaireextbase_domain_model_question
-		#	recordType = Tx_KeQuestionnaireExtbase_Domain_Model_Question
-		#}
 		subclasses {
+			Tx_KeQuestionnaireExtbase_Domain_Model_Question_BlindQuestion = Tx_KeQuestionnaireExtbase_Domain_Model_Question_BlindQuestion
 			Tx_KeQuestionnaireExtbase_Domain_Model_Question_OpenQuestion = Tx_KeQuestionnaireExtbase_Domain_Model_Question_OpenQuestion
 			Tx_KeQuestionnaireExtbase_Domain_Model_Question_ClosedQuestion = Tx_KeQuestionnaireExtbase_Domain_Model_Question_ClosedQuestion
 		}
@@ -46,6 +43,13 @@ config.tx_extbase.persistence.classes{
 		mapping {
 			tableName = tx_kequestionnaireextbase_domain_model_question
 			recordType = Tx_KeQuestionnaireExtbase_Domain_Model_Question_ClosedQuestion
+		}
+	}
+	
+	Tx_KeQuestionnaireExtbase_Domain_Model_Question_ClosedQuestion {
+		mapping {
+			tableName = tx_kequestionnaireextbase_domain_model_question
+			recordType = Tx_KeQuestionnaireExtbase_Domain_Model_Question_BlindQuestion
 		}
 	}
 }

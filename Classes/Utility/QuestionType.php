@@ -34,10 +34,41 @@
 
 class Tx_KeQuestionnaireExtbase_Utility_QuestionType {
     function tcaList (&$params,&$pObj){
-        t3lib_div::devLog('doooof', 'tca', 0, array($params));
-        $params['items'] = array();
-        $params['items'][] = array('open','Tx_KeQuestionnaireExtbase_Domain_Model_Question_OpenQuestion');
-        $params['items'][] = array('closed','Tx_KeQuestionnaireExtbase_Domain_Model_Question_ClosedQuestion');
+		//$params['items'][] = array('open','Tx_KeQuestionnaireExtbase_Domain_Model_Question_OpenQuestion');
+        //$params['items'][] = array('closed','Tx_KeQuestionnaireExtbase_Domain_Model_Question_ClosedQuestion');
+        
+		$extbase_config = $this->loadExtBaseSetup();
+		//t3lib_div::debug($extbase_config,'extbase_config');
+		foreach ($extbase_config['persistence.']['classes.']['Tx_KeQuestionnaireExtbase_Domain_Model_Question.']['subclasses.'] as $key => $sub){
+			$params['items'][] = array($GLOBALS['LANG']->sL("LLL:EXT:ke_questionnaire_extbase/Resources/Private/Language/locallang_question_types.xml:".$key), $sub);
+		}
     }
+	
+	/**
+	* Loads the TypoScript for the given extension prefix, e.g. tx_cspuppyfunctions_pi1, for use in a backend module.
+	*
+	* @param string $extKey
+	* @return array
+	*/
+    function loadExtBaseSetup() {
+		global $TYPO3_CONF_VARS;
+		require_once(PATH_t3lib . 'class.t3lib_page.php');
+		require_once(PATH_t3lib . 'class.t3lib_tstemplate.php');
+		require_once(PATH_t3lib . 'class.t3lib_tsparser_ext.php');
+		list($page) = t3lib_BEfunc::getRecordsByField('pages', 'pid', 0);
+		$pageUid = intval($page['uid']);
+		//$pageUid = 3;
+		$sysPageObj = t3lib_div::makeInstance('t3lib_pageSelect');
+		$rootLine = $sysPageObj->getRootLine($pageUid);
+		$TSObj = t3lib_div::makeInstance('t3lib_tsparser_ext');
+		$TSObj->tt_track = 0;
+		$TSObj->init();
+		$TSObj->runThroughTemplates($rootLine);
+		$TSObj->generateConfig();
+		//t3lib_div::devLog('test '.$pageUid, 'test', 0, $TSObj->flatSetup);
+		//t3lib_div::debug($TSObj);
+		//return $TSObj->flatSetup;
+		return $TSObj->setup['config.']['tx_extbase.'];
+	}
 }
 ?>
